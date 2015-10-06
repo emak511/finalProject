@@ -1,6 +1,6 @@
 package com.mycompany.myapp.dto;
 
-public class Request {
+public class RequestInfo {
 
 	private int requestNo;
 	private String requestEmail;
