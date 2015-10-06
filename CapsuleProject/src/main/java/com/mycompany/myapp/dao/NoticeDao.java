@@ -26,7 +26,7 @@ public class NoticeDao {
 				@Override
 				public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
 					PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"notice_no"});
-					pstmt.setString(1, board.getTitle());
+					pstmt.setString(1, board.getTitle());n
 					pstmt.setString(2, board.getContent());
 				
 					return pstmt;
