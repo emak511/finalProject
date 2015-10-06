@@ -2,22 +2,23 @@ package com.mycompany.myapp.dto;
 
 public class Friend {
 
-	
-	  private String friend_email;
-	  private String member_email;
-	  
-	  
-	public String getFriend_email() {
-		return friend_email;
+	private String friendEmail;
+	private String memberEmail;
+
+	public String getFriendEmail() {
+		return friendEmail;
 	}
-	public void setFriend_email(String friend_email) {
-		this.friend_email = friend_email;
+
+	public void setFriendEmail(String friendEmail) {
+		this.friendEmail = friendEmail;
 	}
-	public String getMember_email() {
-		return member_email;
+
+	public String getMemberEmail() {
+		return memberEmail;
 	}
-	public void setMember_email(String member_email) {
-		this.member_email = member_email;
+
+	public void setMemberEmail(String memberEmail) {
+		this.memberEmail = memberEmail;
 	}
-	  
+
 }

@@ -5,49 +5,51 @@ import java.util.*;
 public class Showtime {
 
 	
-	private String showtime_title;
-	private Date showtime_date;
-	private String showtime_content;
-	private String showtime_no;
-	private String friend_email;
-	private String member_email;
+	private String showtimeTitle;
+	private Date showtimeDate;
+	private String showtimeContent;
+	private String showtimeNo;
+	private String friendEmail;
+	private String memberEmail;
+	
+	public String getShowtimeTitle() {
+		return showtimeTitle;
+	}
+	public void setShowtimeTitle(String showtimeTitle) {
+		this.showtimeTitle = showtimeTitle;
+	}
+	public Date getShowtimeDate() {
+		return showtimeDate;
+	}
+	public void setShowtimeDate(Date showtimeDate) {
+		this.showtimeDate = showtimeDate;
+	}
+	public String getShowtimeContent() {
+		return showtimeContent;
+	}
+	public void setShowtimeContent(String showtimeContent) {
+		this.showtimeContent = showtimeContent;
+	}
+	public String getShowtimeNo() {
+		return showtimeNo;
+	}
+	public void setShowtimeNo(String showtimeNo) {
+		this.showtimeNo = showtimeNo;
+	}
+	public String getFriendEmail() {
+		return friendEmail;
+	}
+	public void setFriendEmail(String friendEmail) {
+		this.friendEmail = friendEmail;
+	}
+	public String getMemberEmail() {
+		return memberEmail;
+	}
+	public void setMemberEmail(String memberEmail) {
+		this.memberEmail = memberEmail;
+	}
 	
 	
-	public String getShowtime_title() {
-		return showtime_title;
-	}
-	public void setShowtime_title(String showtime_title) {
-		this.showtime_title = showtime_title;
-	}
-	public Date getShowtime_date() {
-		return showtime_date;
-	}
-	public void setShowtime_date(Date showtime_date) {
-		this.showtime_date = showtime_date;
-	}
-	public String getShowtime_content() {
-		return showtime_content;
-	}
-	public void setShowtime_content(String showtime_content) {
-		this.showtime_content = showtime_content;
-	}
-	public String getShowtime_no() {
-		return showtime_no;
-	}
-	public void setShowtime_no(String showtime_no) {
-		this.showtime_no = showtime_no;
-	}
-	public String getFriend_email() {
-		return friend_email;
-	}
-	public void setFriend_email(String friend_email) {
-		this.friend_email = friend_email;
-	}
-	public String getMember_email() {
-		return member_email;
-	}
-	public void setMember_email(String member_email) {
-		this.member_email = member_email;
-	}
+
 	
 }
