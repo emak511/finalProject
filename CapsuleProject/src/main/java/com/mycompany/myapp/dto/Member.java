@@ -7,7 +7,7 @@ public class Member {
 	private String memberEmail;
 	private String memberName;
 	private String memberPw;
-	private String memberFriend;
+	private int memberFriend;
 	private Date loginDate;
 	private int memberRequest;
 	
@@ -29,10 +29,10 @@ public class Member {
 	public void setMemberPw(String memberPw) {
 		this.memberPw = memberPw;
 	}
-	public String getMemberFriend() {
+	public int getMemberFriend() {
 		return memberFriend;
 	}
-	public void setMemberFriend(String memberFriend) {
+	public void setMemberFriend(int memberFriend) {
 		this.memberFriend = memberFriend;
 	}
 	public Date getLoginDate() {
