@@ -24,10 +24,15 @@
 				z-index:1;
 				background-color:black;
 				border: none;
-				opacity:0.4;
+				/* opacity:0.4; */
 				border-radius: 20px;
 			}
 			
+			#capsule {
+				width: 200px;
+				height: 200px;
+				z-index:1;
+			}
 		/* 	#member logo{
 				font-family:'Nanum Gothic', sans-serif;
 				color:white;
@@ -38,10 +43,10 @@
 				opacity:1;
 			} */
 			
-			#member #capsule{
+			/* #member #capsule{
 				 display: block;
 				 
-			}
+			} */
 			
 			#member #menu{
 				font-family:'Nanum Gothic', sans-serif;
