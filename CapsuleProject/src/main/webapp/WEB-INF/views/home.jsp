@@ -68,7 +68,7 @@
 		</div>
 		
 		<div id="note">
-			<img src="resources/images/note2.png" alt="OurTime" width="700" height="100">
+			<img src="resources/images/note2.png" alt="OurTime" width="700" >
 		</div>
 		
 		<div id="member">	

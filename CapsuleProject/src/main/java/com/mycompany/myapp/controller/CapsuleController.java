@@ -11,6 +11,5 @@ public class CapsuleController {
 
 	private static final Logger logger = LoggerFactory.getLogger(CapsuleController.class);
 	
-	@Autowired
-	private CapsuleController capsuleController;
+	
 }
