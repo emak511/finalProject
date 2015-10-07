@@ -2,28 +2,27 @@ package com.mycompany.myapp.dto;
 
 public class RequestInfo {
 
-	private int requestNo;
-	private String requestEmail;
-	private int requestType;
+	private int requestInfoNo;
+	private String requestInfoEmail;
+	private int requestInfoType;
 	private String memberEmail;
-	
-	public int getRequestNo() {
-		return requestNo;
+	public int getRequestInfoNo() {
+		return requestInfoNo;
 	}
-	public void setRequestNo(int requestNo) {
-		this.requestNo = requestNo;
+	public void setRequestInfoNo(int requestInfoNo) {
+		this.requestInfoNo = requestInfoNo;
 	}
-	public String getRequestEmail() {
-		return requestEmail;
+	public String getRequestInfoEmail() {
+		return requestInfoEmail;
 	}
-	public void setRequestEmail(String requestEmail) {
-		this.requestEmail = requestEmail;
+	public void setRequestInfoEmail(String requestInfoEmail) {
+		this.requestInfoEmail = requestInfoEmail;
 	}
-	public int getRequestType() {
-		return requestType;
+	public int getRequestInfoType() {
+		return requestInfoType;
 	}
-	public void setRequestType(int requestType) {
-		this.requestType = requestType;
+	public void setRequestInfoType(int requestInfoType) {
+		this.requestInfoType = requestInfoType;
 	}
 	public String getMemberEmail() {
 		return memberEmail;
