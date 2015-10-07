@@ -3,7 +3,7 @@ package com.mycompany.myapp.dto;
 public class FCFlist {
 
 	private String memberEmail;
-	private String groupNo;
+	private int groupNo;
 	
 	public String getMemberEmail() {
 		return memberEmail;
@@ -11,10 +11,10 @@ public class FCFlist {
 	public void setMemberEmail(String memberEmail) {
 		this.memberEmail = memberEmail;
 	}
-	public String getGroupNo() {
+	public int getGroupNo() {
 		return groupNo;
 	}
-	public void setGroupNo(String groupNo) {
+	public void setGroupNo(int groupNo) {
 		this.groupNo = groupNo;
 	}
 }

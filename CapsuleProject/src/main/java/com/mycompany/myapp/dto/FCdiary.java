@@ -1,7 +1,9 @@
+
 package com.mycompany.myapp.dto;
 
 public class FCdiary {
 
+	private int FCdiaryNo;
 	private int groupNo;
 	private int diaryNo;
 	private String memberEmail;
@@ -23,6 +25,12 @@ public class FCdiary {
 	}
 	public void setMemberEmail(String memberEmail) {
 		this.memberEmail = memberEmail;
+	}
+	public int getFCdiaryNo() {
+		return FCdiaryNo;
+	}
+	public void setFCdiaryNo(int fCdiaryNo) {
+		FCdiaryNo = fCdiaryNo;
 	}
 	
 }

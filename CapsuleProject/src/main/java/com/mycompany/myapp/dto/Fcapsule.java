@@ -2,7 +2,7 @@ package com.mycompany.myapp.dto;
 
 public class Fcapsule {
 	private String fCapsuleGname;
-	private int fcfListGno;
+	private int groupNo;
 	private String memberEmail;
 	
 	public String getfCapsuleGname() {
@@ -11,11 +11,11 @@ public class Fcapsule {
 	public void setfCapsuleGname(String fCapsuleGname) {
 		this.fCapsuleGname = fCapsuleGname;
 	}
-	public int getFcfListGno() {
-		return fcfListGno;
+	public int getGroupNo() {
+		return groupNo;
 	}
-	public void setFcfListGno(int fcfListGno) {
-		this.fcfListGno = fcfListGno;
+	public void setGroupNo(int groupNo) {
+		this.groupNo = groupNo;
 	}
 	public String getMemberEmail() {
 		return memberEmail;
