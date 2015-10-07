@@ -23,31 +23,28 @@
 				margin-left: 50px;
 				margin-top: 30px;
 			}
+			
+			a{
+			
+			}
 		
 		</style>
 
 	</head>
 	<body>
-		<h1>MEMBER REGISTER</h1>
+		<h1>비밀번호 찾기</h1>
 		
-		<form method="post" action="add" >
+		<c:if test=${findp !='' }>
+			alert(${findp});
+		</c:if>
+		
+		<form method="post" action="find" >
 			<h4>이메일주소:&nbsp&nbsp<input type="email" name="memberEmail" size="15" required></h4>
-			<h4>이름:&nbsp&nbsp<input type="text" name="memberName" size="15" required></h4>
-			<h4>PASSWORD:&nbsp&nbsp<input type="password" name="memberPW" size="15" required></h4>
-			&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="REGISTER">
+			&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="확인">
 		</form>
 		
-		<c:if test="${check=='Fail'}">
-			<script type="text/javascript">
-		    	alert("중복 이메일 입니다.");
-		    </script>
-		</c:if>
+		<a href="log?result=">돌아가기</a>
 		
-		<c:if test="${check=='ErrorPW'}">
-			<script type="text/javascript">
-		    	alert("비밀번호는 6자리 이상 입력해야 합니다.");
-		    </script>
-		</c:if>
 		
 	</body>
 </html>

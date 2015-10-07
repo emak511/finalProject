@@ -16,6 +16,7 @@
 			h4{
 				margin:30px;
 			}
+			
 			#new{
 				margin: 30px;
 			}
@@ -39,6 +40,10 @@
 		</form>
 		<div id="new">
 			<a href="newMember?check="><button>NEW</button></a>
+		</div>
+		
+		<div id="new">
+			<a href="findPW?findp="><button>비밀번호 찾기</button></a>
 		</div>
 		
 		<c:if test="${result=='wrongPw'}">

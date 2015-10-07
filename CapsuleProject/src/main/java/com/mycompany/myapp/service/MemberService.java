@@ -15,6 +15,7 @@ public class MemberService {
 	
 	public String addMember(Member member){
 		String check=null;
+		
 		/* 회원가입 하려는 이메일이 데이터베이스에 존재하는지 확인 */
 		Member mem=memberDao.select(member.getMemberEmail());
 		
@@ -51,6 +52,12 @@ public class MemberService {
 	
 	public void Delete(String memberEmail){
 		memberDao.delete(memberEmail);
+	}
+	
+	public Member findPW(String memberEmail){
+		
+		Member mem=memberDao.select(memberEmail);
+		return mem;
 	}
 	
 	

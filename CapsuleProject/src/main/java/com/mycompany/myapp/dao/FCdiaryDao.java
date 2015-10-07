@@ -40,7 +40,7 @@ public class FCdiaryDao {
 	}
 	
 	// FCdiary  추가
-	public Integer insert(String memberEmail, )  {
+	public Integer insert(String memberEmail )  {
 		Integer pk = null;
 		
 		String sql = "insert into FCdiarys (FCFlist_gno, diary_dno, member_email) values(?,?,?)";
