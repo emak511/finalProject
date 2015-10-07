@@ -24,10 +24,16 @@
 				z-index:1;
 				background-color:black;
 				border: none;
-				opacity:0.4;
+				/* opacity:0.4; */
 				border-radius: 20px;
 			}
 			
+			#capsule {
+				position:relative;
+				width: 100px;
+				height: 100px;
+				z-index:1;
+			}
 		/* 	#member logo{
 				font-family:'Nanum Gothic', sans-serif;
 				color:white;
@@ -38,10 +44,10 @@
 				opacity:1;
 			} */
 			
-			#member #capsule{
+			/* #member #capsule{
 				 display: block;
 				 
-			}
+			} */
 			
 			#member #menu{
 				font-family:'Nanum Gothic', sans-serif;
@@ -55,7 +61,7 @@
 				padding-top:10px;
 				margin-top:100px;
 				
-			}
+			} 
 			a{
 				color:white;
 				text-decoration:none;
@@ -63,15 +69,16 @@
 		</style>
 	</head>
 	<body>
-		<div id="capsule">
-			<img src="resources/images/capsuleLogo.png" alt="Capsule" width="500" height="500">
-		</div>
-		
-		<div id="note">
-			<img src="resources/images/note2.png" alt="OurTime" width="700" height="100">
-		</div>
-		
+
 		<div id="member">	
+			<div id="capsule">
+				<img src="resources/images/capsuleLogo.png" alt="Capsule">
+			</div>
+		
+			<div id="note">
+				<img src="resources/images/note2.png" alt="OurTime">
+			</div>
+		
 			<div id="menu">
 				<a href="#">회원가입</a>
 			</div>
