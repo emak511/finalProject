@@ -19,8 +19,7 @@
 				margin: 0px auto;
 			
 				color: #FFFFFF;
-
-				background-image: url(resources/image/img.png);
+				background-color: black;
 				background-size: auto 100%;
 			
 			}	
@@ -128,7 +127,7 @@
 			<div id="content2">
 				<div id="menu">
 					<ul>
-						<li><a href="login/list" target="iframe">LOGIN</a></li>
+						<li><a href="login/log?result=" target="iframe">LOGIN</a></li>
 						<li><a href="product/productList" target="iframe">PRODUCT</a></li>
 						<li><a href="product/showCart" target="iframe">CART</a></li>
 						<li><a href="order/list" target="iframe">ORDER</a></li>

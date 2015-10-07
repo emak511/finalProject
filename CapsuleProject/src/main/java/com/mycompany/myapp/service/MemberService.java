@@ -36,6 +36,7 @@ public class MemberService {
 		if(member!=null){
 			if(memberEmail.equals(member.getMemberEmail())){
 				if(memberPW.equals(member.getMemberPw())){
+					memberDao.updateLoginDate(member);
 					session.setAttribute("memberEmail", memberEmail);
 					state="OK";
 				}else{
@@ -43,9 +44,15 @@ public class MemberService {
 				}
 			}
 		}else{
-			state="wrondEmail";
+			state="wrongEmail";
 		}
-		
 		return state;
 	}
+	
+	public void Delete(String memberEmail){
+		memberDao.delete(memberEmail);
+	}
+	
+	
+	
 }
