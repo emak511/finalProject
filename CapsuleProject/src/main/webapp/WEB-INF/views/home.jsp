@@ -28,7 +28,7 @@
 				border-radius: 20px;
 			}
 			
-			#member h1{
+		/* 	#member logo{
 				font-family:'Nanum Gothic', sans-serif;
 				color:white;
 				margin-left:100px;
@@ -36,9 +36,15 @@
 				float:left;
 				z-index:10;
 				opacity:1;
+			} */
+			
+			#member #capsule{
+				 display: block;
+				 
 			}
 			
 			#member #menu{
+				font-family:'Nanum Gothic', sans-serif;
 				background-color:green;
 				width:200px;
 				height:30px;
@@ -57,18 +63,23 @@
 		</style>
 	</head>
 	<body>
-		<div id="member">
-			<h1>너와 나의 시간을 담다</h1>
+		<div id="capsule">
+			<img src="resources/images/capsuleLogo.png" alt="Capsule" width="500" height="500">
+		</div>
+		
+		<div id="note">
+			<img src="resources/images/note2.png" alt="OurTime" width="700" height="100">
+		</div>
+		
+		<div id="member">	
 			<div id="menu">
-				<a href="#">이메일로 10초만에 가임</a>
+				<a href="#">회원가입</a>
 			</div>
 			<div id="menu">
 				<a href="#">로그인</a>
 			</div> 
 		</div>
 
-			
-		
 		
 		<li><a href="main">ORDER</a></li>
 	</body>
