@@ -18,8 +18,8 @@
 				width:960px;
 				margin: 0px auto;
 			
-				color: #FFFFFF;
-				background-color: black;
+				color: #662500;
+				background-color: #D4F4FA;
 				background-size: auto 100%;
 			
 			}	
@@ -31,9 +31,11 @@
 			}
 			/*------------------------------------*/			
 			#header {
+			    width: 300px;
 				margin: 20px 0px;
 				left: 50px;
 				font-family: Orbitron;
+				
 			}
 			#content {
 				border: 3px solid white;	

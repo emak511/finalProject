@@ -22,7 +22,7 @@ public class NoticeDao {
 		@Autowired
 		private JdbcTemplate jdbcTemplate;
 		
-		public Integer insert(Notice notice) {
+		public Integer insert(Notice notice, String memberEmail) {
 			Integer pk = null;
 			String sql = "insert into notices(notice_date, notice_title, notice_content, member_email) values(now(),?,?,?)";
 			KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -32,7 +32,7 @@ public class NoticeDao {
 					PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"notice_no"});
 					pstmt.setString(1, notice.getNoticeTitle());
 					pstmt.setString(2, notice.getNoticeContent());
-					pstmt.setString(3, notice.getMemberEmail());
+					pstmt.setString(3, memberEmail);
 					return pstmt;
 				}
 			},keyHolder);
@@ -85,22 +85,24 @@ public class NoticeDao {
 			return notice;
 		}
 		
-		public int update(Notice notice) {
-			String sql = "update notices set notice_title=?, notice_content=? where notice_no=?";
+		public int update(Notice notice, String memberEmail) {
+			String sql = "update notices set notice_title=?, notice_content=? where notice_no=? and member_email=?";
 			int rows = jdbcTemplate.update(
 				sql,
 				notice.getNoticeTitle(),
 				notice.getNoticeContent(),
-				notice.getNoticeNo()
+				notice.getNoticeNo(), 
+				memberEmail
 			);
 			return rows;
 		}
 		
-		public int delete(long noticeNo) {
-			String sql = "delete from notices where notice_no=?";
+		public int delete(int noticeNo, String memberEmail) {
+			String sql = "delete from notices where notice_no=? and member_email=?";
 			int rows = jdbcTemplate.update(
 				sql,
-				noticeNo
+				noticeNo,
+				memberEmail
 			);
 			return rows;
 		}

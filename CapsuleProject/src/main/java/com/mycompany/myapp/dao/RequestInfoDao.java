@@ -24,10 +24,10 @@ import com.mycompany.myapp.dto.RequestInfo;
 public class RequestInfoDao {
 
 
-	 		@Autowired
+/*	 		@Autowired
 	 		private JdbcTemplate jdbcTemplate;
 	 		
-	 		public Integer insert(RequestInfo requestInfo) {
+	 		public Integer insert(RequestInfo requestInfo, String memberEmail) {
 	 			Integer pk = null;
 	 			String sql = "insert into requests(request_email, request_type, member_email) values(?,?,?)";
 	 			KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -37,7 +37,7 @@ public class RequestInfoDao {
 	 					PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"request_no"});
 	 					pstmt.setString(1, requestInfo.getRequestInfoEmail());
 	 					pstmt.setInt(2, requestInfo.getRequestInfoType());
-	 					pstmt.setString(3, requestInfo.getMemberEmail());
+	 					pstmt.setString(3, memberEmail);
 	 					return pstmt;
 	 				}
 	 			},keyHolder);
@@ -46,12 +46,8 @@ public class RequestInfoDao {
 	 			return pk;
 	 		}
 	 		
-	 		public List<RequestInfo> selectByPage(int requestNo, int rowsPerPage) {
-	 			String sql = "";
-	 			sql += "select request_no, request_email, request_type, memberEmail" ;
-	 			sql += "from requests";
-	 			sql += "order by request_no desc ";
-	 			sql += "limit ?,?";
+	 		public List<RequestInfo> selectByPage(int requestNo, int rowsPerPage, String memberEmail) {
+	 			String sql ="select request_no, request_email, request_type from requests where memberEmail= ? order by request_no desc limit ?,?";
 	 			
 	 			List<RequestInfo> list = jdbcTemplate.query(
 	 				sql, 
@@ -63,7 +59,7 @@ public class RequestInfoDao {
 	 						requestInfo.setRequestInfoNo(rs.getInt("request_no"));
 	 						requestInfo.setRequestInfoEmail(rs.getString("request_email"));
 	 						requestInfo.setRequestInfoType(rs.getInt("request_type"));
-	 						requestInfo.setMemberEmail(rs.getString("member_email"));
+	 						
 	 						return requestInfo;
 	 					}
 	 				}
@@ -71,7 +67,7 @@ public class RequestInfoDao {
 	 			return list;
 	 		}
 	 		
-	 		public RequestInfo selectByPk(int requestInfoNo) {
+	 		public RequestInfo selectByPk(int requestInfoNo, String memberEmail) {
 	 			String sql = "select * from requests where request_no=?";
 	 			RequestInfo requestInfo = jdbcTemplate.queryForObject(
 	 				sql,
@@ -82,7 +78,8 @@ public class RequestInfoDao {
 	 						RequestInfo requestInfo = new RequestInfo();
 	 						requestInfo.setRequestInfoNo(rs.getInt("request_no"));
 	 						requestInfo.setRequestInfoEmail(rs.getString("request_email"));
-	 						requestInfo.setMemberEmail(rs.getString("member_email"));
+	 						requestInfo.setRequestInfoType(rs.getInt("request_type"));
+	 						memberEmail;
 	 						return requestInfo;
 	 					}
 	 				}
@@ -91,15 +88,16 @@ public class RequestInfoDao {
 	 		}
 	 		
 
-	 		public int delete(long requestInfoNo) {
-	 			String sql = "delete from requests where request_no=?";
+	 		public int delete(int requestInfoNo, String memberEmail) {
+	 			String sql = "delete from requests where request_no=? and memberEmail=?";
 	 			int rows = jdbcTemplate.update(
 	 				sql,
-	 				requestInfoNo
+	 				requestInfoNo,
+	 				memberEmail
 	 			);
 	 			return rows;
 	 		}
-	 		
+	 		*/
 
 	 }
 

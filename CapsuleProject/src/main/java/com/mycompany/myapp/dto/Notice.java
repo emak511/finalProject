@@ -7,14 +7,8 @@ public class Notice {
 	private Date noticeDate;
 	private String noticeTitle;
 	private String noticeContent;
-	private String memberEmail;
-	
-	public String getMemberEmail() {
-		return memberEmail;
-	}
-	public void setMemberEmail(String memberEmail) {
-		this.memberEmail = memberEmail;
-	}
+
+
 	public int getNoticeNo() {
 		return noticeNo;
 	}
