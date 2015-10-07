@@ -23,19 +23,16 @@
 				margin-left: 50px;
 				margin-top: 30px;
 			}
-			
-			a{
-			
-			}
-		
 		</style>
 
 	</head>
 	<body>
 		<h1>비밀번호 찾기</h1>
 		
-		<c:if test=${findp !='' }>
-			alert(${findp});
+		<c:if test="${findp!=''}">
+			<script type="text/javascript">
+				alert("메일로보내주기");
+		    </script>
 		</c:if>
 		
 		<form method="post" action="find" >
