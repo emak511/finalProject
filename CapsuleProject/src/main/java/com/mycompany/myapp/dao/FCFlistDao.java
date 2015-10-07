@@ -40,27 +40,15 @@ public class FCFlistDao {
 	}
 	
 	//캡슐을 볼 수 있는 친구 추가하기
-	public Integer insert(FCFlist fcfList, String memberEmail)  {
+	public void insert(int groupNo, String memberEmail) {
 		Integer pk = null;
-		
-		String sql = "insert into FCFlist values(?, ?)";
-
-		KeyHolder keyHolder = new GeneratedKeyHolder(); 
-		
-		jdbcTemplate.update(new PreparedStatementCreator() {
-
-			@Override
-			public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
-				PreparedStatement pstmt = conn.prepareStatement(sql);
-				
-				pstmt.setInt(1, fcfList.getGroupNo());
-				pstmt.setString(2, memberEmail);
-				return pstmt;
-			}	
-		}, keyHolder );
-		Number keyNumber = keyHolder.getKey();
-		pk = keyNumber.intValue();
-		return pk;
+		String sql = "insert into FCFlist (FCFlist_gno, member_email) values(?, ?)";
+			KeyHolder keyHolder=new GeneratedKeyHolder();
+			jdbcTemplate.update(
+					sql, 
+					memberEmail, 
+					groupNo 
+			);	
 	}
 	
 	//캡슐을 볼 수 있는 친구 삭제하기

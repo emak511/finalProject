@@ -39,8 +39,32 @@ public class FCdiaryDao {
 		return list;
 	}
 	
+	// FCdiary 목록 조회
+		public List<FCdiary> select(String memberEmail)  {
+
+			String sql = "select  * from Fcapsules where member_email = ? ";
+			List<FCdiary> list = jdbcTemplate.query(  
+					sql,
+					new Object[] {memberEmail},
+					new RowMapper<FCdiary>() {
+					
+						@Override 
+						public FCdiary mapRow(ResultSet rs, int rowNum) throws SQLException {
+							FCdiary fcDiary = new FCdiary();
+							fcDiary.setFCdiaryNo(rs.getInt("FCdiary_no"));
+							fcDiary.setDiaryNo(rs.getInt("diary_dno"));
+							fcDiary.setGroupNo(rs.getInt("FCFlist_gno"));
+							fcDiary.setMemberEmail(rs.getString("member_email"));						
+							return fcDiary;
+						} 
+					}        
+	 			);
+			return list;
+
+		}
+	
 	// FCdiary  추가
-	public Integer insert(String memberEmail )  {
+	public Integer insert(String memberEmail, Diary diary, Fcapsule fCapsule)  {
 		Integer pk = null;
 		
 		String sql = "insert into FCdiarys (FCFlist_gno, diary_dno, member_email) values(?,?,?)";
@@ -53,9 +77,9 @@ public class FCdiaryDao {
 			public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
 				PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"FCdiary_no"});
 				
-				pstmt.setInt(1, product.getProductNo());
-				pstmt.setString(2, loginId);
-				pstmt.setInt(3, cart.getCartAmount());
+				pstmt.setInt(2, diary.getDiaryNo());
+				pstmt.setInt(1, fCapsule.getGroupNo());
+				pstmt.setString(3, memberEmail);
 				return pstmt;
 			}	
 		}, keyHolder );

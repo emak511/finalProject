@@ -17,14 +17,37 @@ public class FcapsuleDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	// Fcapsule 목록 조회 페이징 처리
-	public List<Fcapsule> selectByPageNo(String memberEmail, int pageNo, int rowsPerPage)  {
+	// Fcasule 목록 조회
+	public List<Fcapsule> select(String memberEmail)  {
 
-		String sql = "select member_email, FCFlist_gno, Fcapsule_gname from Fcapsule where member_email = ? limit ?, ?";
+		String sql = "select  * from Fcapsules where member_email = ? ";
+		List<Fcapsule> list = jdbcTemplate.query(  
+				sql,
+				new Object[] {memberEmail},
+				new RowMapper<Fcapsule>() {
+				
+					@Override 
+					public Fcapsule mapRow(ResultSet rs, int rowNum) throws SQLException {
+						Fcapsule fCapsule = new Fcapsule();
+						fCapsule.setfCapsuleGname(rs.getString("Fcapsule_gname"));
+						fCapsule.setGroupNo(rs.getInt("FCFlist_gno"));
+						fCapsule.setMemberEmail(rs.getString("member_email"));
+						return fCapsule;
+					} 
+				}        
+ 			);
+		return list;
+
+	}
+	
+	// Fcapsule 목록 조회 페이징 처리
+	public List<Fcapsule> selectByPageNo(String memberEmail, int groupNo, int pageNo, int rowsPerPage)  {
+
+		String sql = "select member_email, FCFlist_gno, Fcapsule_gname from Fcapsule where member_email = ?, group_no = ? limit ?, ?";
 
 		List<Fcapsule> list = jdbcTemplate.query(   
 				sql,
-				new Object[] {memberEmail, (pageNo-1)*rowsPerPage , rowsPerPage},
+				new Object[] {memberEmail, groupNo, (pageNo-1)*rowsPerPage , rowsPerPage},
 				new RowMapper<Fcapsule>() {
 
 					@Override 
@@ -41,12 +64,12 @@ public class FcapsuleDao {
 	}
 	
 		//Fcapsule 추가하기
-		public Integer insert(String fCapsuleGname, String memberEmail)  {
+		public Integer insert(String fCapsuleGname,String memberEmail)  {
 			Integer pk = null;
 			
 			String sql = "insert into Fcapsules (Fcapsule_gname, member_email) values(?, ?)";
 
-			KeyHolder keyHolder = new GeneratedKeyHolder(); 
+			KeyHolder keyHolder = new GeneratedKeyHolder();
 			
 			jdbcTemplate.update(new PreparedStatementCreator() {
 
