@@ -34,7 +34,7 @@
 				height: 100px;
 				z-index:1;
 			}
-		/* 	#member logo{
+		 	#member logo{
 				font-family:'Nanum Gothic', sans-serif;
 				color:white;
 				margin-left:100px;
@@ -42,12 +42,12 @@
 				float:left;
 				z-index:10;
 				opacity:1;
-			} */
+			} 
 			
-			/* #member #capsule{
+			#member #capsule{
 				 display: block;
 				 
-			} */
+			} 
 			
 			#member #menu{
 				font-family:'Nanum Gothic', sans-serif;
@@ -83,7 +83,7 @@
 				<a href="#">회원가입</a>
 			</div>
 			<div id="menu">
-				<a href="#">로그인</a>
+				<a href="main">로그인</a>
 			</div> 
 		</div>
 
