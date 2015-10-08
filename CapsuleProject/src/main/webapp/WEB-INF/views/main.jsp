@@ -32,17 +32,27 @@
 	#wrapper {
 		width:100%;
 		height:100%;
+		position: absolute;
+	}
+	#wrapper2 {
+		position: relative;
+		top: 600px;
 	}
 	#content1 {
+	 	position:absolute;
 		width:100%;
 		height:300px;
 		background-color: #d5cc49;
-		float: none;
+		z-index: 10;
+		
 	}
-	#content2 {
+	#content2 {	
+		position:relative;
+		top: 300px;
 		width:100%;
 		height:300px;
 		background-color: #99d3bb;
+		z-index: 1;
 	}
 	#content3 {
 		width:100%;
@@ -51,21 +61,25 @@
 		background-image: url(resources/images/ground.png);
 	}
 	#content4 {
+
 		width:100%;
 		height:600px;
 		background-color: #853b2f;
 	}
 	#content5 {
+	
 		width:100%;
 		height:200px;
 		background-color: #6a3b2a;
 	}
 	#content6 {
+	
 		width:100%;
 		height:200px;
 		background-color: #562f21;
 	}
 	#content7 {
+	
 		width:100%;
 		height:200px;
 		background-color: #432419;
@@ -78,11 +92,14 @@
 		width: 594px;
 		margin: 0 auto;
 	}
+	#tree {
+		width: 466px;
+		margin: 0 auto;
+	}
 	#timewrapper {
 		width: 350px;
 		height: 50px;
 		margin-left: 10px;
-		margin-top: 275px;
 		background-color: #81523e;
 		border-radius: 10px;
 		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
@@ -104,7 +121,7 @@
 		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
 		background-color: white;
 		float: right;
-		margin-top: 275px;
+
 	}
 	#top {
 		display: flex;
@@ -116,9 +133,7 @@
 		width:100%;
 		display: inline;
 		float: left;
-	}
-	#logo {
-		float:none;
+		z-index: 100;
 	}
 	#title {
 		margin-top: 5px;
@@ -170,42 +185,43 @@
 </head>
 <body>
 
-	<div id="floatelement">
-		<div id="timewrapper">
-			<div id="clock">
-				<script type="text/javascript">
-				</script>
-			</div>
-		</div>
-		
-		<div id="friendlistwrapper">
-			<div id="top">
-				<div  id="title">이웃나무</div>
-				<div id="search"><img src="resources/images/search.png" ></div>
-				<div id="delete"><img src="resources/images/x.png" ></div>
-			</div>
-			<div id="mid">
-				<div id="list">
-				정도영 < aikuna@naver.com ><br>
-				장희원 < emark@naver.com ><br>
-				윤성현 < cartoon@naver.com ><br>
-				김예지 < yjkim@naver.com><br>
-				</div>
-			</div>
-			<div id="bottom">
-				<div id="request">뿌리추가 요청 [2]건</div>
-			</div>
-		</div>
-	</div>
 	<div id="wrapper">
 		<div id="content1">
 			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule"></div>
 			<div id="capsuleLogo"><img src="resources/images/write.png" alt="OurTime"></div>
+			<div id="tree"><img src="resources/images/tree.png" alt="Mytree"></div>
 		</div>
-		
+	
+
 		<div id="content2">
-			
+			<div id="timewrapper">
+				<div id="clock">
+					<script type="text/javascript">
+					</script>
+				</div>
+			</div>
+					
+			<div id="friendlistwrapper">
+				<div id="top">
+					<div  id="title">이웃나무</div>
+					<div id="search"><img src="resources/images/search.png" ></div>
+					<div id="delete"><img src="resources/images/x.png" ></div>
+				</div>
+				<div id="mid">
+					<div id="list">
+					정도영 < aikuna@naver.com ><br>
+					장희원 < emark@naver.com ><br>
+					윤성현 < cartoon@naver.com ><br>
+					김예지 < yjkim@naver.com><br>
+					</div>
+				</div>
+				<div id="bottom">
+					<div id="request">뿌리추가 요청 [2]건</div>
+				</div>
+			</div>	
 		</div>
+	</div>
+	<div id="wrapper2"> 
 		
 		<div id="content3">
 		
