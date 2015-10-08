@@ -109,8 +109,7 @@
 	#top {
 		display: flex;
 		width: 250px;
-		background-color: #e2dfcc;
-		border-radius: 10px 10px 0 0 ;
+		height: 40px;
 
 	}
 	#floatelement {
@@ -128,23 +127,49 @@
 		display: inline-block;
 		font-family:'Nanum Gothic', sans-serif;
 		font-weight: bold;
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, 10);
 		
 	}
 	#search {
 		display: inline-block;
 		margin-top: 5px;
 		flex: 1;
+
 	}
 	#delete {
 		display: inline-block;
 		margin-top: 5px;
 		flex: 1;
 		margin-right: 10px;
+
+	}
+	#mid {
+		height: 220px;
+		background-color: #e2dfcc;
+	}
+	#bottom {
+		height: 40px;
+		
+	}
+	#request {
+		text-align: center;
+		font-size: 20px;
+		color: #ff4b64;
+		font-family:'Nanum Gothic', sans-serif;
+	}
+	#mid {
+		font-size: 12px;
+		font-family:'Nanum Gothic', sans-serif;
+	}
+	#list {
+		padding-top: 10px;
+		padding-left: 10px;
 	}
 	
 	</style>
 </head>
 <body>
+
 	<div id="floatelement">
 		<div id="timewrapper">
 			<div id="clock">
@@ -159,15 +184,23 @@
 				<div id="search"><img src="resources/images/search.png" ></div>
 				<div id="delete"><img src="resources/images/x.png" ></div>
 			</div>
-			<div id="listbackground"></div>
-			<div id="list"></div>
-			<div id="request"></div>		
+			<div id="mid">
+				<div id="list">
+				정도영 < aikuna@naver.com ><br>
+				장희원 < emark@naver.com ><br>
+				윤성현 < cartoon@naver.com ><br>
+				김예지 < yjkim@naver.com><br>
+				</div>
+			</div>
+			<div id="bottom">
+				<div id="request">뿌리추가 요청 [2]건</div>
+			</div>
 		</div>
 	</div>
 	<div id="wrapper">
 		<div id="content1">
-			<div id="logo"><img src="resources/images/capsuleLogo.png" alt="Capsule"></div>
-			<div id="capsuleLogo"><img src="resources/images/note2.png" alt="OurTime"></div>
+			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule"></div>
+			<div id="capsuleLogo"><img src="resources/images/write.png" alt="OurTime"></div>
 		</div>
 		
 		<div id="content2">
