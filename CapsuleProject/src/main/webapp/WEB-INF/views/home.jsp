@@ -40,8 +40,5 @@
 		<div id="member">	
 			<iframe src="home_2" name="iframe" height="100%" width="100%" style="border:none;"></iframe>
 		</div>
-
-		<li><a href="main">ORDER</a></li>
-		<li><a href="home_1">홈</a></li>
 	</body>
 </html>

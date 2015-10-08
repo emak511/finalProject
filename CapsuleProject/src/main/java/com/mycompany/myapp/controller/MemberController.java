@@ -52,7 +52,7 @@ public class MemberController {
 	public String logcheck(String memberEmail, String memberPW, HttpSession session, Model model){
 		String result=memberService.login(memberEmail, memberPW, session);
 		if(result.equals("OK")){
-			return "redirect:/";
+			return "redirect:/main";
 		}else{
 			return "redirect:/login/log?result="+result;
 		}
