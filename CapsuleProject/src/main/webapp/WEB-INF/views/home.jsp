@@ -24,11 +24,6 @@
 				border: none;
 				border-radius: 20px;
 			}
-		
-			a{
-				color:white;
-				text-decoration:none;
-			} 
 			
 		</style>
 	</head>
