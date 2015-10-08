@@ -7,7 +7,7 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 		
 		<meta charset=UTF-8">
-		<title>Insert title here</title>
+		<title>Capsule</title>
 		<style type="text/css">
 		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 			body{
@@ -34,6 +34,10 @@
 				border-radius: 5px;
 				margin-left:195px;
 				margin-top:15px;
+			}
+			
+			#sub:hover{
+				cursor:pointer;
 			}
 			
 			#back a{

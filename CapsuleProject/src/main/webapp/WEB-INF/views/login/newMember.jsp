@@ -42,6 +42,10 @@
 				margin-left:195px;
 				margin-top:15px;
 			}
+			
+			#sub:hover{
+				cursor:pointer;
+			}
 		</style>
 
 	</head>

@@ -20,10 +20,8 @@
 				margin-top: 25%;
 				width:500px;
 				height:300px;
-				z-index:1;
 				background-color:white;
 				border: none;
-				opacity:1;
 				border-radius: 20px;
 			}
 		
