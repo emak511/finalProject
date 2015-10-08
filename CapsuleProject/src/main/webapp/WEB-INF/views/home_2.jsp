@@ -7,13 +7,18 @@
 		<meta charset=UTF-8">
 		<title>Capsule</title>
 		<style type="text/css">
-			#2{
-				oapacity:1;
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+			body{
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Nanum Gothic', sans-serif;
+				color:black;
 			}
+			
 			#capsule{
 				display: block; 
 				margin-left: 190px;
-				margin-top:20px;
+				margin-top:10px;
 				opacity:1;
 			} 
 			
@@ -25,7 +30,7 @@
 			
 			#login{
 				margin-left:180px;
-				margin-top:20px;
+				margin-top:25px;
 			}
 			
 			#Join{
@@ -37,7 +42,6 @@
 		</style>
 	</head>
 	<body>
-	<div id="2">
 		<div id="capsule">
 			<img src="resources/images/capsule1.png" alt="Capsule" width="100px" height="100px"/>
 		</div>
@@ -47,12 +51,15 @@
 		</div>
 		
 		<div id="login">
-			<img src="resources/images/login.png" alt="Login"/>
+			<a href="login/log">
+				<img src="resources/images/login.png" alt="Login"/>
+			</a>
 		</div>
 		
 		<div id="Join">
-			<img src="resources/images/newmember.png" alt="Join"/>
+			<a href="login/newMember">
+				<img src="resources/images/newmember.png" alt="Join"/>
+			</a>
 		</div>
-	</div>
 	</body>
 </html>

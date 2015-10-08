@@ -6,35 +6,45 @@
 	<head>
 		<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-		
 		<meta charset=UTF-8">
-		<title>Insert title here</title>
+		<title>Capsule</title>
 		<style type="text/css">
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 			body{
-				color:white;
-				font-family:Play;
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Nanum Gothic', sans-serif;
+				color:black;
 			}
 			
 			h4{
-				margin:30px;
+				margin-left:160px;
 			}
 			
 			h1{
-				margin-left: 50px;
-				margin-top: 30px;
+				margin-left:180px;
+				margin-top:30px;
 			}
 		
+			#sub{
+				border: none;
+				background-color:#b0ac5e;
+				width:100px;
+				height:30px;
+				border-radius: 5px;
+				margin-left:195px;
+				margin-top:15px;
+			}
 		</style>
 
 	</head>
 	<body>
-		<h1>MEMBER REGISTER</h1>
-		
+		<h1>회원가입</h1>
 		<form method="post" action="add" >
-			<h4>이메일주소:&nbsp&nbsp<input type="email" name="memberEmail" size="15" required></h4>
-			<h4>이름:&nbsp&nbsp<input type="text" name="memberName" size="15" required></h4>
-			<h4>PASSWORD:&nbsp&nbsp<input type="password" name="memberPW" size="15" required></h4>
-			&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="REGISTER">
+			<h4><input type="email" name="memberEmail" size="20" placeholder="Email" style="height: 20px;" required></h4>
+			<h4><input type="text" name="memberName" size="20" placeholder="Name" style="height: 20px;" required></h4>
+			<h4><input type="password" name="memberPW" size="20" placeholder="Password" style="height: 20px;" required></h4>
+			<input id="sub" type="submit" value="등록하기">
 		</form>
 		
 		<c:if test="${check=='Fail'}">

@@ -4,24 +4,48 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 		
 		<meta charset=UTF-8">
 		<title>Insert title here</title>
 		<style type="text/css">
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 			body{
-				color:white;
-				font-family:Play;
-			}
-			
-			h4{
-				margin:30px;
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Nanum Gothic', sans-serif;
+				color:black;
 			}
 			
 			h1{
-				margin-left: 50px;
-				margin-top: 30px;
+				margin-left:160px;
+				margin-top:30px;
+			}
+			
+			h4{
+				margin-left:135px;
+			}
+			
+			#sub{
+				border: none;
+				background-color:#b0ac5e;
+				width:100px;
+				height:30px;
+				border-radius: 5px;
+				margin-left:195px;
+				margin-top:15px;
+			}
+			
+			#back a{
+				margin-left:215px;
+				margin-top:50px;
+				text-decoration:none;
+			}
+			#inf{
+				width:300px;
+				height:70px;
+				margin-left:110px;
+			
 			}
 		</style>
 
@@ -36,12 +60,17 @@
 		</c:if>
 		
 		<form method="post" action="find" >
-			<h4>이메일주소:&nbsp&nbsp<input type="email" name="memberEmail" size="15" required></h4>
-			&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="확인">
+			<h4><input type="email" name="memberEmail" size="30" placeholder="이메일을 입력하세요" style="height: 20px;" required></h4>
+			<div id="inf">
+				가입하신 이메일 주소를 입력해주시면 해당 이메일로 비밀번호가 발송됩니다.
+				입력하신 이메일에서 비밀번호를 입력하세요.
+			</div>
+			<div id="back">
+				<a href="log?result=">돌아가기</a>
+			</div>
+			
+			<input id="sub" type="submit" value="확인">
 		</form>
-		
-		<a href="log?result=">돌아가기</a>
-		
 		
 	</body>
 </html>

@@ -5,47 +5,69 @@
 <html>
 	<head>
 		<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 		<meta charset=UTF-8">
-		<title>Insert title here</title>
+		<title>Capsule</title>
 		<style type="text/css">
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 			body{
-				color:white;
-				font-family:Play;
-			}
-			
-			h4{
-				margin:30px;
-			}
-			
-			#new{
-				margin: 30px;
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Nanum Gothic', sans-serif;
+				color:black;
 			}
 			
 			h1{
-				margin: 30px;
+				margin-left:200px;
+				margin-top:30px;
 			}
+			
+			h4{
+				margin-left:160px;
+			}
+			
+
+			#sub{
+				border: none;
+				background-color:#b0ac5e;
+				width:100px;
+				height:30px;
+				border-radius: 5px;
+				margin-left:195px;
+				margin-top:20px;
+			}
+			
+			#findpass a{
+				float:left;
+				text-decoration:none;
+				margin-left:160px;
+				margin-top:10px;
+			}
+			
+			#new a{
+				position:absolute;
+				margin-left:5px;
+				margin-top:10px;
+				text-decoration:none;
+			}
+
 		</style>
-		
-		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-	    <script type="text/javascript">
-	    	
-		</script>
+	
 	</head>
 	<body>
 		<h1>로그인</h1>
 		<form method="post" action="logcheck" >
-			<h4>EMAIL:&nbsp&nbsp<input type="email" name="memberEmail" size="15" ></h4>
-			<h4>PASSWORD:&nbsp&nbsp<input type="password" name="memberPW" size="15" ></h4>
-			&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="LOGIN">
+			<h4><input type="email" name="memberEmail" size="20" placeholder="Email" style="height: 20px;"></h4>
+			<h4><input type="password" name="memberPW" size="20" placeholder="Password" style="height: 20px;"></h4>
+			<div id="findpass">
+				<a href="findPW?findp=">비밀번호 찾기/</a>
+			</div>
+			<div id="new">
+				<a href="newMember?check=">회원가입</a>
+			</div>
+			<input id="sub" type="submit" value="LOGIN"> 
 		</form>
-		<div id="new">
-			<a href="newMember?check="><button>NEW</button></a>
-		</div>
-		
-		<div id="new">
-			<a href="findPW?findp="><button>비밀번호 찾기</button></a>
-		</div>
-		
+
 		<c:if test="${result=='wrongPw'}">
 			<script type="text/javascript">
 		    	alert("비밀번호를 다시 입력해 주세요.");
