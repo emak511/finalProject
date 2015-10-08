@@ -37,6 +37,7 @@
 		width:100%;
 		height:300px;
 		background-color: #d5cc49;
+		float: none;
 	}
 	#content2 {
 		width:100%;
@@ -85,6 +86,7 @@
 		background-color: #81523e;
 		border-radius: 10px;
 		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
+		position: absolute;
 	}
 	#clock {
 		width: 280px;
@@ -102,15 +104,42 @@
 		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
 		background-color: white;
 		float: right;
+		margin-top: 275px;
 	}
 	#top {
-		display: inline-block;
-	
-			
-		
+		display: flex;
+		width: 250px;
+		background-color: #e2dfcc;
+		border-radius: 10px 10px 0 0 ;
+
 	}
 	#floatelement {
+		width:100%;
+		display: inline;
 		float: left;
+	}
+	#logo {
+		float:none;
+	}
+	#title {
+		margin-top: 5px;
+		margin-left : 10px;
+		flex: 8;
+		display: inline-block;
+		font-family:'Nanum Gothic', sans-serif;
+		font-weight: bold;
+		
+	}
+	#search {
+		display: inline-block;
+		margin-top: 5px;
+		flex: 1;
+	}
+	#delete {
+		display: inline-block;
+		margin-top: 5px;
+		flex: 1;
+		margin-right: 10px;
 	}
 	
 	</style>
