@@ -20,7 +20,7 @@
 				margin-top: 25%;
 				width:500px;
 				height:300px;
-				background-color:white;
+				background-color:rgba(255,255,255,0.5);
 				border: none;
 				border-radius: 20px;
 			}
