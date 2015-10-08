@@ -26,7 +26,6 @@
 				margin-left:160px;
 			}
 			
-
 			#sub{
 				border: none;
 				background-color:#b0ac5e;
@@ -35,6 +34,10 @@
 				border-radius: 5px;
 				margin-left:195px;
 				margin-top:20px;
+			}
+			
+			#sub:hover{
+				cursor:pointer;
 			}
 			
 			#findpass a{

@@ -25,6 +25,13 @@
 				margin-left:180px;
 				margin-top:30px;
 			}
+			
+			#back a{
+				position:absolute;
+				margin-left:215px;
+				margin-top:-17px;
+				text-decoration:none;
+			}
 		
 			#sub{
 				border: none;
@@ -35,6 +42,10 @@
 				margin-left:195px;
 				margin-top:15px;
 			}
+			
+			#sub:hover{
+				cursor:pointer;
+			}
 		</style>
 
 	</head>
@@ -44,6 +55,9 @@
 			<h4><input type="email" name="memberEmail" size="20" placeholder="Email" style="height: 20px;" required></h4>
 			<h4><input type="text" name="memberName" size="20" placeholder="Name" style="height: 20px;" required></h4>
 			<h4><input type="password" name="memberPW" size="20" placeholder="Password" style="height: 20px;" required></h4>
+			<div id="back">
+				<a href="log?result=">돌아가기</a>
+			</div>
 			<input id="sub" type="submit" value="등록하기">
 		</form>
 		

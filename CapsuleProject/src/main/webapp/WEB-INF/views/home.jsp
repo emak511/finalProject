@@ -7,7 +7,6 @@
 		<title>Capsule</title>
 		<style type="text/css">
 		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-			
 			body{
 				margin: 0px;
 				padding: 0px;
@@ -21,18 +20,10 @@
 				margin-top: 25%;
 				width:500px;
 				height:300px;
-				z-index:1;
-				background-color:white;
+				background-color:rgba(255,255,255,0.5);
 				border: none;
-				opacity:1;
 				border-radius: 20px;
 			}
-			
-		
-			a{
-				color:white;
-				text-decoration:none;
-			} 
 			
 		</style>
 	</head>
