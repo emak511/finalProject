@@ -18,10 +18,10 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 
 import com.mycompany.myapp.dto.Notice;
-import com.mycompany.myapp.dto.RequestInfo;
+import com.mycompany.myapp.dto.FriendRequest;
 
 @Component
-public class RequestInfoDao {
+public class FriendRequestDao {
 
 
 /*	 		@Autowired
