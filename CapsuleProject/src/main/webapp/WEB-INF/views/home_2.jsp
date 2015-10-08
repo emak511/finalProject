@@ -19,7 +19,6 @@
 				display: block; 
 				margin-left: 190px;
 				margin-top:10px;
-				opacity:1;
 			} 
 			
 			#note{
