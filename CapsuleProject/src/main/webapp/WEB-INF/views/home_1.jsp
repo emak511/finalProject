@@ -6,34 +6,89 @@
 
 		<title>Capsule</title>
 		<style type="text/css">
-		
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				background-image: url(resources/images/main6.jpg);
+				background-size: 100% 100%;
+			}
+			
+			#member{
+				margin: 0 auto;
+				margin-top: 25%;
+				width:500px;
+				height:300px;
+				z-index:1;
+				background-color:black;
+				border: none;
+				/* opacity:0.4; */
+				border-radius: 20px;
+			}
+			
+			#capsule {
+				position:relative;
+				width: 100px;
+				height: 100px;
+				z-index:1;
+			}
+		 	#member logo{
+				font-family:'Nanum Gothic', sans-serif;
+				color:white;
+				margin-left:100px;
+				margin-top:80px;
+				float:left;
+				z-index:10;
+				opacity:1;
+			} 
+			
+			#member #capsule{
+				 display: block;
+				 
+			} 
+			
+			#member #menu{
+				font-family:'Nanum Gothic', sans-serif;
+				background-color:green;
+				width:200px;
+				height:30px;
+				margin:10px;
+				border-radius: 10px;
+				float:left;
+				text-align:center;
+				padding-top:10px;
+				margin-top:100px;
+				
+			} 
+			a{
+				color:white;
+				text-decoration:none;
+			}
 		</style>
 	</head>
-	
 	<body>
-		<div id="page">
-			<div id="header">
-				<h1>Team4's Project</h1>
-			</div>
 
-			
-			<div id="content2">
-				<div id="menu">
-					<ul>
-						<li><a href="login/log?result=" target="iframe">LOGIN</a></li>
-						<li><a href="product/productList" target="iframe">PRODUCT</a></li>
-						<li><a href="product/showCart" target="iframe">CART</a></li>
-						<li><a href="order/list" target="iframe">ORDER</a></li>
-					</ul>
-				</div>
-				<div id="content">
-					<iframe name="iframe" height="100%" width="100%"></iframe>
-				</div>
+		<div id="member">	
+			<div id="capsule">
+				<img src="resources/images/capsuleLogo.png" alt="Capsule">
 			</div>
-			
-			<div id="footer">
-				<h5>Team4</h5>
+		
+			<div id="note">
+				<img src="resources/images/note2.png" alt="OurTime">
 			</div>
+		
+			<div id="menu">
+				<a href="#">회원가입</a>
+			</div>
+			<div id="menu">
+				<a href="main">로그인</a>
+			</div> 
 		</div>
+
+		
+		<li><a href="main">ORDER</a></li>
+		<li><a href="home_1">홈</a></li>
 	</body>
 </html>

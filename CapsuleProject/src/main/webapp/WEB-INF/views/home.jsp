@@ -89,5 +89,6 @@
 
 		
 		<li><a href="main">ORDER</a></li>
+		<li><a href="home_1">홈</a></li>
 	</body>
 </html>

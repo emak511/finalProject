@@ -40,6 +40,10 @@ public class HomeController {
 		public String login() {
 			return "main";
 	}
-	    
+	   
+		@RequestMapping("home_1")
+		public String home_1(){
+			return "home_1";
+		}
 	
 }
