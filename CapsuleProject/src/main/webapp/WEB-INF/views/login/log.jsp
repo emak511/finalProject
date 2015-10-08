@@ -65,7 +65,7 @@
 			<div id="new">
 				<a href="newMember?check=">회원가입</a>
 			</div>
-			<input id="sub" type="submit" value="LOGIN"> 
+			<input id="sub" type="submit" value="LOGIN" formtarget="_parent"> 
 		</form>
 
 		<c:if test="${result=='wrongPw'}">
