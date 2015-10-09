@@ -36,6 +36,8 @@
 
 		<div id="buttonGroup">
 			<a href="write">글쓰기</a>
+			<a href="updateForm?diary_dno=1">수정하기</a>
+			<a href="delete">삭제하기</a>
 		</div>
 	</body>
 </html>

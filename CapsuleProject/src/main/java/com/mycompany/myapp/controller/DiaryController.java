@@ -54,4 +54,16 @@ public class DiaryController {
 		return "diary/list";
 	}
 
+	@RequestMapping("/diary/updateForm")
+	public String updateForm(int diary_dno, Model model){
+		Diary diary=diaryService.getDiary(diary_dno);
+		model.addAttribute("diary",diary);
+		return "diary/updateForm";
+	}
+	
+	@RequestMapping("/diary/update")
+	public String update(Diary diary){
+		diaryService.modify(diary);
+		return "redirect:/diary/writeForm";
+	}
 }

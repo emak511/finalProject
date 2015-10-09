@@ -64,12 +64,37 @@ public class DiaryDao {
 		return list;
 	}
 	
+	public Diary selectByPk(int diaryNo){
+		String sql="select * from diarys where diary_dno=?";
+		Diary diary=jdbcTemplate.queryForObject(sql,
+				new Object[] {diaryNo},
+				new RowMapper<Diary>(){
+			@Override
+			public Diary mapRow(ResultSet rs, int rowNum) throws SQLException{
+				Diary diary=new Diary();
+				diary.setDiaryNo(rs.getInt("diary_dno"));
+				diary.setDiaryTitle(rs.getString("diary_title"));
+				diary.setDiaryContent(rs.getString("diary_content"));
+				diary.setCapsule1(rs.getInt("diary_c1"));
+				diary.setCapsule3(rs.getInt("diary_c3"));
+				diary.setDiaryDate(rs.getDate("diary_date"));
+				diary.setMemberEmail(rs.getString("member_email"));
+				return diary;
+			}
+		});
+		return diary;
+	}
+	
+	
+	
 	public int update(Diary diary){
-		String sql="update diarys set diary_title=?, diary_content where diary_dno=?";
+		String sql="update diarys set diary_title=?, diary_content=?, diary_c1=?, diary_c3=? where diary_dno=?";
 		int rows=jdbcTemplate.update(
 			sql,
 			diary.getDiaryTitle(),
 			diary.getDiaryContent(),
+			diary.getCapsule1(),
+			diary.getCapsule3(),
 			diary.getDiaryNo()
 		);
 		return rows;

@@ -22,4 +22,14 @@ public class DiaryService {
 		List<Diary> list=diaryDao.select(diary_c1, diary_c3, memberEmail);
 		return list;
 	}
+	
+	public Diary getDiary(int diaryNo){
+		Diary diary=diaryDao.selectByPk(diaryNo);
+		return diary;
+	}
+	
+	public void modify(Diary diary){
+		diaryDao.update(diary);
+	}
+	
 }
