@@ -48,6 +48,7 @@
 		width:100%;
 		height:100%;
 		position: absolute;
+		z-index: 1;
 	}
 	#wrapper2 {
 		position: relative;
@@ -79,25 +80,24 @@
 	#content4 {
 		
 		width:100%;
-		height:200px;
+		height: 130px;
 		background-color: #853b2f;
 	}
 	#content5 {
 	
 		width:100%;
-		height:200px;
+		height:155px;
 		background-color: #6a3b2a;
 	}
 	#content6 {
 	
 		width:100%;
-		height:200px;
+		height:155px;
 		background-color: #562f21;
 	}
 	#content7 {
-	
 		width:100%;
-		height:200px;
+		height:155px;
 		background-color: #432419;
 	}
 	#logo {
@@ -111,6 +111,7 @@
 	#tree {
 		width: 466px;
 		margin: 0 auto;
+		
 	}
 	#timewrapper {
 		width: 350px;
@@ -233,7 +234,6 @@
 		font-family:'Nanum Gothic', sans-serif;
 		opacity: 0.7;
 		border-radius: 10px;
-		padding: 10px;
 		
 	}
 	#timecapsuletext {
@@ -254,6 +254,30 @@
 		line-height: 130px;
 		margin-left: 30px;
 		z-index: 10;
+	}
+	#capsulebox1 {
+		margin-left: 60px;
+	}
+	#bottomlogobox {
+		width: 680px;
+		height: 400px;
+		background-color:rgba(255,255,255,0.5);
+		border-radius: 20px;
+		z-index: 10;
+		position: relative;
+		top: 170px;
+		margin: 0 auto;
+	}
+	#bottomlogo {
+		width: 234px;
+		margin: auto auto;
+	}
+	#bottomtext {
+		width: 594px;
+		margin: auto auto;
+	}
+	#bottomwrapper {
+		
 	}
 
 	</style>
@@ -298,33 +322,39 @@
 		</div>
 	</div>
 	<div id="wrapper2"> 
-		
+		<a name="write"></a>
 		<div id="content3">
 		
 		</div>
-		<a name="write"></a>
+		
 		<div id="content4" >
 			<div id="content4-1">
 				<div id="logo2"><img src="resources/images/capsule1.png" alt="Capsule" height="130px"></div>
 				<div id="noticetext">
 					<div id="noticetext-1">공지사항</div>
-					<div id="noticetext-2">공지사항1</div>
+					<div id="noticetext-2">공지사항 내용</div>
 				</div>
 				<div id="timecapsuletext">타입캡슐</div>
 				<div id="timecasuleimg"><img src="resources/images/send.png" alt="SendTimeCapsule"></div>		
 			</div>
-		
 		</div>
 		
 		<div id="content5">
-		
+			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
 		</div>
-		
 		<div id="content6">
-		
+			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
 		</div>
-		
+		<div id="content7">
+			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
+		</div>
 	</div>
+	
+	<div id="bottomlogobox">
+			<div id="bottomlogo"><img src="resources/images/capsule1.png" alt="bottomlogo" ></div>
+			<div id="bottomtext"><img src="resources/images/write.png" alt="bottomtext" ></div>
+	</div>
+		
 
 </body>
 </html>
