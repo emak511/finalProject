@@ -45,7 +45,7 @@ public class DiaryDao {
 	}
 	
 	public List<Diary> select(int diary_c1, int diary_c3, String memberEmail){
-		String sql="select diary_dno, diary_title, diary_content, diary_date where diary_c1=? and diary_c3=? and member_email=?";
+		String sql="select diary_dno, diary_title, diary_content, diary_date from diarys where diary_c1=? and diary_c3=? and member_email=?";
 		List<Diary> list=jdbcTemplate.query(
 				sql,
 				new Object[] {diary_c1, diary_c3, memberEmail},

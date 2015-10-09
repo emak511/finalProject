@@ -47,5 +47,9 @@
 			</div>
 		</form>
 		
+		<div>
+			<a href="list?diary_c1=0&diary_c3=1&memberEmail=ysh@naver.com">다이어리보기</a>
+		</div>
+		
 	</body>
 </html>

@@ -1,8 +1,11 @@
 package com.mycompany.myapp.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mycompany.myapp.dto.Diary;
@@ -40,8 +43,15 @@ public class DiaryController {
 			diary.setCapsule1(0);
 			diary.setCapsule3(1);
 		}
-		Integer dd=diaryService.addDiary(diary, memberEmail);
+		diaryService.addDiary(diary, memberEmail);
 		return "redirect:/diary/writeForm";
+	}
+	
+	@RequestMapping("/diary/list")
+	public String list(int diary_c1, int diary_c3, String memberEmail, Model model){
+		List<Diary> list=diaryService.getDiaryList(diary_c1, diary_c3, memberEmail);
+		model.addAttribute("list", list);
+		return "diary/list";
 	}
 
 }
