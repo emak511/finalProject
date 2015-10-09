@@ -31,5 +31,9 @@
 		<div id="member">	
 			<iframe src="home_2" name="iframe" height="100%" width="100%" style="border:none;"></iframe>
 		</div>
+		
+		<div>
+			<li><a href="diary">다이어리 테스트</a>
+		</div>
 	</body>
 </html>
