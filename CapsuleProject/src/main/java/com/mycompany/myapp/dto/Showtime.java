@@ -1,6 +1,6 @@
 package com.mycompany.myapp.dto;
 
-import java.util.*;
+import java.sql.Date;
 
 public class Showtime {
 
@@ -8,9 +8,10 @@ public class Showtime {
 	private String showtimeTitle;
 	private Date showtimeDate;
 	private String showtimeContent;
-	private String showtimeNo;
+	private int showtimeNo;
 	private String friendEmail;
 	private String memberEmail;
+	private Date showtimeWritedate;
 	
 	public String getShowtimeTitle() {
 		return showtimeTitle;
@@ -30,12 +31,7 @@ public class Showtime {
 	public void setShowtimeContent(String showtimeContent) {
 		this.showtimeContent = showtimeContent;
 	}
-	public String getShowtimeNo() {
-		return showtimeNo;
-	}
-	public void setShowtimeNo(String showtimeNo) {
-		this.showtimeNo = showtimeNo;
-	}
+
 	public String getFriendEmail() {
 		return friendEmail;
 	}
@@ -47,6 +43,18 @@ public class Showtime {
 	}
 	public void setMemberEmail(String memberEmail) {
 		this.memberEmail = memberEmail;
+	}
+	public int getShowtimeNo() {
+		return showtimeNo;
+	}
+	public void setShowtimeNo(int showtimeNo) {
+		this.showtimeNo = showtimeNo;
+	}
+	public Date getShowtimeWritedate() {
+		return showtimeWritedate;
+	}
+	public void setShowtimeWritedate(Date showtimeWritedate) {
+		this.showtimeWritedate = showtimeWritedate;
 	}
 	
 	

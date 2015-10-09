@@ -6,8 +6,10 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<style type="text/css">
+			@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+		
 			body {
-				font-family: "돋움";
+				font-family: "Nanum Gothic" , sans-serif;
 				font-size: 12px;
 				color: white;
 			}
@@ -89,27 +91,24 @@
 		<h4>게시물 보기</h4>
 		<form id="modifyForm" name="modifyForm" method="post" action="update">		
 			<span class="title">번호:</span> 
-			<span class="content">${board.no}</span> 
-			<input type="hidden" name="no" value="${board.no}"/><br/>
+			<span class="content">${notice.no}</span> 
+			<input type="hidden" name="no" value="${notice.no}"/><br/>
 			
 			<span class="title">제목:</span> 
-			<input id="title" type="text" name="title" value="${board.title}"/> <br/>
+			<input id="title" type="text" name="title" value="${notice.title}"/> <br/>
 			
-			<span class="title">글쓴이:</span> 
-			<span class="content">${board.writer}</span> <br/>
+			<span class="title">관리자:</span> 
+			<span class="content">${notice.writer}</span> <br/>
 			
 			<span class="title">날짜:</span> 
-			<span class="content">${board.date}</span> <br/>
-			
-			<span class="title">조회수:</span> 
-			<span class="content">${board.hitcount}</span> <br/>
-			
+			<span class="content">${notice.date}</span> <br/>
+					
 			<span class="title">내용:</span> <br/>
-			<textarea name="content" cols="80" rows="5">${board.content}</textarea>
+			<textarea name="content" cols="80" rows="5">${notice.content}</textarea>
 		</form>
 		<div id="buttonGroup">
 			<a href="javascript:sendData()">수정</a>
-			<a href="detail?boardNo=${board.no}">취소</a>
+			<a href="detail?noticeNo=${notice.no}">취소</a>
 		</div>		
 	</body>
 </html>

@@ -69,7 +69,7 @@ public class NoticeDao {
 		
 		public Integer insert(Notice notice, String memberEmail) {
 			Integer pk = null;
-			String sql = "insert into notices(notice_date, notice_title, notice_content, member_email) values(now(),?,?,?)";
+			String sql = "insert into notices(notice_date, notice_title, notice_content, member_email) values(now(),?,?,?) member_email='capsule@naver.com";
 			KeyHolder keyHolder = new GeneratedKeyHolder();
 			jdbcTemplate.update(new PreparedStatementCreator() {
 				@Override
@@ -88,7 +88,7 @@ public class NoticeDao {
 		
 		
 		public int update(Notice notice, String memberEmail) {
-			String sql = "update notices set notice_title=?, notice_content=? where notice_no=? and member_email=?";
+			String sql = "update notices set notice_title=?, notice_content=? where notice_no=? and member_email='capsule@naver.com'";
 			int rows = jdbcTemplate.update(
 				sql,
 				notice.getNoticeTitle(),
@@ -100,7 +100,7 @@ public class NoticeDao {
 		}
 		
 		public int delete(int noticeNo, String memberEmail) {
-			String sql = "delete from notices where notice_no=? and member_email=?";
+			String sql = "delete from notices where notice_no=? and member_email='capsule@naver.com'";
 			int rows = jdbcTemplate.update(
 				sql,
 				noticeNo,

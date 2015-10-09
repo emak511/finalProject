@@ -33,10 +33,7 @@
 					<td>내용</td>
 					<td><textarea name="content" rows="5" cols="50"></textarea></td>
 				</tr>
-				<tr>
-					<td>첨부</td>
-					<td><input type="file" name="attach"/></td>
-				</tr>
+				
 				<tr>
 					<td colspan="2" style="text-align: center;">
 						<br/>

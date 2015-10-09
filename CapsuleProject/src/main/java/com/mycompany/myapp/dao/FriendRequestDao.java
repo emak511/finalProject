@@ -19,85 +19,84 @@ import org.springframework.stereotype.Component;
 
 import com.mycompany.myapp.dto.Notice;
 import com.mycompany.myapp.dto.FriendRequest;
+import com.mycompany.myapp.dto.Member;
 
 @Component
 public class FriendRequestDao {
 
 
-/*	 		@Autowired
-	 		private JdbcTemplate jdbcTemplate;
-	 		
-	 		public Integer insert(RequestInfo requestInfo, String memberEmail) {
-	 			Integer pk = null;
-	 			String sql = "insert into requests(request_email, request_type, member_email) values(?,?,?)";
-	 			KeyHolder keyHolder = new GeneratedKeyHolder();
-	 			jdbcTemplate.update(new PreparedStatementCreator() {
-	 				@Override
-	 				public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
-	 					PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"request_no"});
-	 					pstmt.setString(1, requestInfo.getRequestInfoEmail());
-	 					pstmt.setInt(2, requestInfo.getRequestInfoType());
-	 					pstmt.setString(3, memberEmail);
-	 					return pstmt;
-	 				}
-	 			},keyHolder);
-	 			Number keyNumber = keyHolder.getKey();
-	 			pk = keyNumber.intValue();
-	 			return pk;
-	 		}
-	 		
-	 		public List<RequestInfo> selectByPage(int requestNo, int rowsPerPage, String memberEmail) {
-	 			String sql ="select request_no, request_email, request_type from requests where memberEmail= ? order by request_no desc limit ?,?";
-	 			
-	 			List<RequestInfo> list = jdbcTemplate.query(
-	 				sql, 
-	 				new Object[] { (requestNo-1)*rowsPerPage, rowsPerPage },
-	 				new RowMapper<RequestInfo>() {
-	 					@Override
-	 					public RequestInfo mapRow(ResultSet rs, int rowNum) throws SQLException {
-	 						RequestInfo requestInfo = new RequestInfo();
-	 						requestInfo.setRequestInfoNo(rs.getInt("request_no"));
-	 						requestInfo.setRequestInfoEmail(rs.getString("request_email"));
-	 						requestInfo.setRequestInfoType(rs.getInt("request_type"));
-	 						
-	 						return requestInfo;
-	 					}
-	 				}
-	 			);
-	 			return list;
-	 		}
-	 		
-	 		public RequestInfo selectByPk(int requestInfoNo, String memberEmail) {
-	 			String sql = "select * from requests where request_no=?";
-	 			RequestInfo requestInfo = jdbcTemplate.queryForObject(
-	 				sql,
-	 				new Object[] {requestInfoNo},
-	 				new RowMapper<RequestInfo>() {
-	 					@Override
-	 					public RequestInfo mapRow(ResultSet rs, int rowNum) throws SQLException {
-	 						RequestInfo requestInfo = new RequestInfo();
-	 						requestInfo.setRequestInfoNo(rs.getInt("request_no"));
-	 						requestInfo.setRequestInfoEmail(rs.getString("request_email"));
-	 						requestInfo.setRequestInfoType(rs.getInt("request_type"));
-	 						memberEmail;
-	 						return requestInfo;
-	 					}
-	 				}
-	 			);
-	 			return requestInfo;
-	 		}
-	 		
+		@Autowired
+		private JdbcTemplate jdbcTemplate;
+		
+		//insert 요청 들어오는 것 
+		public Integer insert(FriendRequest friendRequest, Member member) {
+			Integer pk = null;
+			String sql = "insert into friendRequests(member_email, member_name) values(?,?)";
+			KeyHolder keyHolder = new GeneratedKeyHolder(); 
+			jdbcTemplate.update(new PreparedStatementCreator() {
+			@Override
+			public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
+				PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"friendRequest_no"});
+			
+				pstmt.setString(1, member.getMemberEmail());
+				pstmt.setString(2, member.getMemberName());
+					return pstmt;
+			}
+			},keyHolder);
+			Number keyNumber = keyHolder.getKey();
+			pk = keyNumber.intValue();
+			return pk;
+		}
+		
 
-	 		public int delete(int requestInfoNo, String memberEmail) {
-	 			String sql = "delete from requests where request_no=? and memberEmail=?";
-	 			int rows = jdbcTemplate.update(
-	 				sql,
-	 				requestInfoNo,
-	 				memberEmail
-	 			);
-	 			return rows;
-	 		}
-	 		*/
+		public int delete(int friendRequestNo, String memberEmail) {
+			String sql = "delete from friendRequests where friendRequest_no=? and member_email=?";
+			int rows = jdbcTemplate.update(
+				sql,
+				friendRequestNo,
+				memberEmail
+			);
+			return rows;
+		}
+		
+		
+		//select
+		public List<FriendRequest> selectByPage(int friendRequestNo, int rowsPerPage,Member member) {
+			String sql ="select friendRequest_no, member_email from friendRequests where member_email= ? order by friendRequest_no desc limit ?,?";
+			
+			List<FriendRequest> list = jdbcTemplate.query(
+				sql, 
+				new Object[] { (friendRequestNo-1)*rowsPerPage, rowsPerPage },
+				new RowMapper<FriendRequest>() {
+					@Override
+					public FriendRequest mapRow(ResultSet rs, int rowNum) throws SQLException {
+						FriendRequest friendRequest = new FriendRequest();
+						friendRequest.setFriendRequestNo(rs.getInt("friendRequest_no"));
+						return friendRequest;
+					}
+				}
+			);
+			return list;
+		}
+		
+		public FriendRequest selectByPk(int friendRequestNo, Member member) {
+			String sql = "select * from friendRequests where friendRequest_no=? and member_email=?";
+			FriendRequest friendRequest = jdbcTemplate.queryForObject(
+				sql,
+				new Object[] {friendRequestNo},
+				new RowMapper<FriendRequest>() {
+					@Override
+					public FriendRequest mapRow(ResultSet rs, int rowNum) throws SQLException {
+						FriendRequest friendRequest = new FriendRequest();
+						friendRequest.setFriendRequestNo(rs.getInt("friendRequest_no"));
+						member.setMemberEmail(rs.getString("member_email"));
+						return friendRequest;
+					}
+				}
+			);
+			return friendRequest;
+		}
+		
 
 	 }
 

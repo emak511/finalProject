@@ -7,8 +7,11 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<style type="text/css">
+			@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+			
 			body {
 				color: white;
+				font-family: "Nanum Gothic" , sans-serif;
 			}
 			table {
 				width: 100%;
@@ -87,18 +90,16 @@
 			<tr>
 				<th style="width:50px">번호</th>
 				<th>제목</th>
-				<th style="width:60px">글쓴이</th>
-				<th style="width:80px">날짜</th>
-				<th style="width:60px">조회수</th>
+				<th style="width:60px">관리자</th>
+				<th style="width:60px">날짜</th>
 			</tr>
 			
-			<c:forEach var="board" items="${list}">
+			<c:forEach var="notice" items="${list}">
 				<tr>
-					<td>${board.no}</td>
-					<td><a class="title" href="detail?boardNo=${board.no}">${board.title}</a></td>
-					<td>${board.writer}</td>
-					<td>${board.date}</td>
-					<td>${board.hitcount}</td>
+					<td>${notice.no}</td>
+					<td><a class="title" href="detail?noticeNo=${notice.no}">${notice.title}</a></td>
+					<td>${notice.writer}</td>
+					<td>${notice.date}</td>
 				</tr>
 			</c:forEach>
 		</table>

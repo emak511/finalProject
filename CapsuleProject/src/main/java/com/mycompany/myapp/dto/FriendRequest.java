@@ -2,15 +2,14 @@ package com.mycompany.myapp.dto;
 
 public class FriendRequest {
 
-	private int requestInfoNo;
+	private int friendRequestNo;
 
-
-	public int getRequestInfoNo() {
-		return requestInfoNo;
-	}
-	public void setRequestInfoNo(int requestInfoNo) {
-		this.requestInfoNo = requestInfoNo;
+	public int getFriendRequestNo() {
+		return friendRequestNo;
 	}
 
+	public void setFriendRequestNo(int friendRequestNo) {
+		this.friendRequestNo = friendRequestNo;
+	}
 
 }

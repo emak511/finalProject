@@ -6,8 +6,11 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<style type="text/css">
+		
+			@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+			
 			body {
-				font-family: "돋움";
+				font-family: "Nanum Gothic" , sans-serif;
 				font-size: 12px;
 				color: white;
 			}
@@ -79,19 +82,17 @@
 		<div id="part1">
 			<div id="part1_1">	
 				<span class="title">번호:</span> 
-				<span class="content">${board.no}</span> <br/>
+				<span class="content">${notice.no}</span> <br/>
 				
 				<span class="title">제목:</span> 
-				<span class="content">${board.title}</span> <br/>
+				<span class="content">${notice.title}</span> <br/>
 				
 				<span class="title">글쓴이:</span> 
-				<span class="content">${board.writer}</span> <br/>
+				<span class="content">${notice.writer}</span> <br/>
 				
 				<span class="title">날짜:</span> 
-				<span class="content">${board.date}</span> <br/>
+				<span class="content">${notice.date}</span> <br/>
 				
-				<span class="title">첨부:</span> 
-				<span class="content">${board.originalFileName}</span> <br/>
 			</div>
 			
 		
@@ -99,13 +100,13 @@
 		
 		<div id="part2">
 			<span class="title">내용:</span> <br/>
-			<pre>${board.content}</pre>
+			<pre>${notice.content}</pre>
 		</div>
 		
 		<div id="buttonGroup">
 			<a href="list?pageNo=${pageNo}">목록</a>
-			<a href="updateForm?bno=${board.no}">수정</a>
-			<a href="delete/${board.no}">삭제</a>
+			<a href="updateForm?bno=${notice.no}">수정</a>
+			<a href="delete/${notice.no}">삭제</a>
 		</div>		
 	</body>
 </html>
