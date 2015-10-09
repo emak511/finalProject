@@ -9,29 +9,8 @@ public class Diary {
 	private int capsule3;
 	private String memberEmail;
 	private String diaryTitle;
-	
-	
-	public String getDiaryTitle() {
-		return diaryTitle;
-	}
-	public void setDiaryTitle(String diaryTitle) {
-		this.diaryTitle = diaryTitle;
-	}
-	public String getDiaryContent() {
-		return diaryContent;
-	}
-	public void setDiaryContent(String diaryContent) {
-		this.diaryContent = diaryContent;
-	}
-	public Date getDiaryDate() {
-		return diaryDate;
-	}
-	public void setDiaryDate(Date diaryDate) {
-		this.diaryDate = diaryDate;
-	}
 	private String diaryContent;
 	private Date diaryDate;
-	
 	public int getDiaryNo() {
 		return diaryNo;
 	}
@@ -56,5 +35,26 @@ public class Diary {
 	public void setMemberEmail(String memberEmail) {
 		this.memberEmail = memberEmail;
 	}
+	public String getDiaryTitle() {
+		return diaryTitle;
+	}
+	public void setDiaryTitle(String diaryTitle) {
+		this.diaryTitle = diaryTitle;
+	}
+
+	public Date getDiaryDate() {
+		return diaryDate;
+	}
+	public void setDiaryDate(Date diaryDate) {
+		this.diaryDate = diaryDate;
+	}
+	public String getDiaryContent() {
+		return diaryContent;
+	}
+	public void setDiaryContent(String diaryContent) {
+		this.diaryContent = diaryContent;
+	}
+	
+	
 
 }

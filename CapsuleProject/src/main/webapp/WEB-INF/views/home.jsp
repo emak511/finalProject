@@ -34,7 +34,7 @@
 		</div>
 		
 		<div>
-			<li><a href="diary">다이어리 테스트</a>
+			<li><a href="writeForm">다이어리 테스트</a>
 		</div>
 	</body>
 </html>
