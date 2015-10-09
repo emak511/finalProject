@@ -74,11 +74,12 @@
 		height:62px;	
 		background-color: #99d3bb;
 		background-image: url(resources/images/ground.png);
+		z-index: 5;
 	}
 	#content4 {
-
+		
 		width:100%;
-		height:600px;
+		height:200px;
 		background-color: #853b2f;
 	}
 	#content5 {
@@ -119,14 +120,16 @@
 		border-radius: 10px;
 		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
 		position: absolute;
+
 	}
 	#clock {
 		width: 280px;
 		height: 50px;
-		margin: 0 auto;	
 		font-size: 30px; 
 		color : white;
 		font-family:'Nanum Gothic', sans-serif;
+		display: inline-block;
+		
 	}
 	#friendlistwrapper {
 		height: 300px;
@@ -142,7 +145,7 @@
 		display: flex;
 		width: 250px;
 		height: 40px;
-
+		text-decoration: none;
 	}
 	#floatelement {
 		width:100%;
@@ -195,7 +198,64 @@
 		padding-top: 10px;
 		padding-left: 10px;
 	}
-	
+	#gobottom {
+		display: inline-block;
+
+	}
+	#content4-1 {
+		display: flex;
+		background-color: #33231c;
+		opacity: 0.7;
+		height: 130px;
+	}
+	#noticetext {
+		z-index: 10;
+		display: flex;
+		flex: 5;
+		line-height: 130px;
+		color: white;
+	}
+	#noticetext-1 {
+		color: white;
+		font-family:'Nanum Gothic', sans-serif;
+		z-index: 10;
+		font-size: 30px;
+		
+	}
+	#noticetext-2 {		
+		margin-left: 20px;
+		margin-top: 15px;
+		width: 300px;
+		z-index: 10;
+		height: 100px;
+		background-color: white;		
+		color: black;
+		font-family:'Nanum Gothic', sans-serif;
+		opacity: 0.7;
+		border-radius: 10px;
+		padding: 10px;
+		
+	}
+	#timecapsuletext {
+		font-size: 30px;
+		font-family:'Nanum Gothic', sans-serif;
+		color: white;
+		flex: 1;
+		line-height: 130px;
+		z-index: 10;
+	}
+	#timecasuleimg {
+		flex: 1;
+		line-height: 130px;
+		z-index: 10;
+	}
+	#logo2 {
+		flex: 1;
+		line-height: 130px;
+		margin-left: 30px;
+		z-index: 10;
+	}
+
 	</style>
 </head>
 <body>
@@ -214,12 +274,13 @@
 					<script type="text/javascript">
 					</script>
 				</div>
+				<div id="gobottom"><a href="#write"><img src="resources/images/diary.png" height="30px;"></a></div>
 			</div>
 					
 			<div id="friendlistwrapper">
 				<div id="top">
-					<div  id="title">이웃나무</div>
-					<div id="search"><a href="" id="btn"><img src="resources/images/search.png"></a></div>
+					<div  id="title"><a href="/notice/list">이웃나무</a></div>
+					<div id="search"><img src="resources/images/search.png"></div>
 					<div id="delete"><img src="resources/images/x.png" ></div>
 				</div>
 				<div id="mid">
@@ -241,8 +302,17 @@
 		<div id="content3">
 		
 		</div>
-		
-		<div id="content4">
+		<a name="write"></a>
+		<div id="content4" >
+			<div id="content4-1">
+				<div id="logo2"><img src="resources/images/capsule1.png" alt="Capsule" height="130px"></div>
+				<div id="noticetext">
+					<div id="noticetext-1">공지사항</div>
+					<div id="noticetext-2">공지사항1</div>
+				</div>
+				<div id="timecapsuletext">타입캡슐</div>
+				<div id="timecasuleimg"><img src="resources/images/send.png" alt="SendTimeCapsule"></div>		
+			</div>
 		
 		</div>
 		
@@ -254,9 +324,6 @@
 		
 		</div>
 		
-		<div id="content7">
-		
-		</div>
 	</div>
 
 </body>
