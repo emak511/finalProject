@@ -13,8 +13,6 @@ public class CapsuleController {
 	private static final Logger logger = LoggerFactory.getLogger(CapsuleController.class);
 
 	
-	@RequestMapping("/mainCSS/search")
-	public String search(){
-		return "main";
-	}
+
+	
 }

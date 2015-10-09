@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<script src="lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 	//이벤트 연결
 		window.onload = function() {
@@ -28,7 +28,7 @@
 		$(function() {
 			$("#btn").click(function() {
 				$.ajax({
-					url: "search.jsp",
+					url: "mainCSS/search.jsp",
 					dataType: "html",
 					success: function(data){
 						console.log(data);
@@ -219,7 +219,7 @@
 			<div id="friendlistwrapper">
 				<div id="top">
 					<div  id="title">이웃나무</div>
-					<div id="search"><a href="mainCSS/search"><img src="resources/images/search.png"></a></div>
+					<div id="search"><a href="" id="btn"><img src="resources/images/search.png"></a></div>
 					<div id="delete"><img src="resources/images/x.png" ></div>
 				</div>
 				<div id="mid">
