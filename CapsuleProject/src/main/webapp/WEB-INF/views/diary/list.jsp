@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset=UTF-8">
 		<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-		<meta charset=UTF-8">
 		<title>Capsule</title>
 		<style type="text/css">
 			body{
@@ -17,30 +17,38 @@
 				width:500px;
 				height:300px;
 				border:1px solid black;
-			
 			}
+			
+			#diaryleft{
+				position:absolute;
+				margin-top:120px;
+			}
+			
+			#diaryright{
+				position:absolute;
+				margin-left:450px;
+				margin-top:115px;
+			}
+			
 		</style>
 	</head>
 	
 	<body>
-
+		<img id="diaryleft" src="../resources/images/diaryleft.png" width="40px"/>
+		<img id="diaryright" src="../resources/images/diaryright.png" width="40px"/>
 		<section>
 			<div id="diaryBox">
-				<div>
-				<img src="/resources/images/diaryleft.png" width="50px"/>
-				</div>
-				<div>
-				<img src="/resources/images/diaryright.png" width="50px"/>
-				</div>
-				<c:forEach var="diary" items="${list}">
-					<li>${diary.diaryTitle }</li>
-					<li>${diary.diaryDate }</li>
-					<li>${diary.diaryContent }</li>	
+				<c:forEach var="diary" items="${list}" varStatus="status">
+					<c:choose> 
+						<c:when test="${status.count==1}">
+							<li>${diary.diaryTitle }</li>
+							<li>${diary.diaryDate }</li>
+							<li>${diary.diaryContent }</li>	
+						</c:when>
+					</c:choose>
 				</c:forEach>
-			
 			</div>
 		</section>
-
 
 		<div id="buttonGroup">
 			<a href="writeForm">다이어리 작성</a>
