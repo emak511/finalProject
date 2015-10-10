@@ -27,10 +27,10 @@
 		<section>
 			<div id="diaryBox">
 				<div>
-				<img src="resources/images/Left.png" width="50px"/>
+				<img src="/resources/images/diaryleft.png" width="50px"/>
 				</div>
 				<div>
-				<img src="resources/images/right.png" width="50px"/>
+				<img src="/resources/images/diaryright.png" width="50px"/>
 				</div>
 				<c:forEach var="diary" items="${list}">
 					<li>${diary.diaryTitle }</li>
