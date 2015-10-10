@@ -24,19 +24,16 @@
 			}, 1000);	
 		};
 		
-		
-		$(function() {
-			$("#btn").click(function() {
-				$.ajax({
-					url: "mainCSS/search.jsp",
-					dataType: "html",
-					success: function(data){
-						console.log(data);
-						$("#friendlistwrapper").html(data);
-					}
-				});
-			});
-		})
+		function search() {
+			var friendlistwrapper = document.querySelector("#friendlistwrapper");
+			friendlistwrapper.style.visibility="hidden";
+			friendlistwrapper.style.float="left";
+			
+			friendlistwrapper2.style.visibility="visible";
+
+			
+		}
+
 		
 	</script>
 	<style type="text/css">
@@ -132,16 +129,7 @@
 		display: inline-block;
 		
 	}
-	#friendlistwrapper {
-		height: 300px;
-		width: 250px;
-		margin-right: 10px;
-		border-radius: 10px;
-		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
-		background-color: white;
-		float: right;
 
-	}
 	#top {
 		display: flex;
 		width: 250px;
@@ -162,6 +150,7 @@
 		font-family:'Nanum Gothic', sans-serif;
 		font-weight: bold;
 		text-shadow: 1px 1px 3px rgba(0, 0, 0, 10);
+		text-decoration: none;
 		
 	}
 	#search {
@@ -279,6 +268,49 @@
 	#bottomwrapper {
 		
 	}
+	#searchbtn {
+		width: 26px;
+		height: 28px;
+		background-image: url(resources/images/search.png);
+		border: none;
+		background-color: white;
+	}
+	#friendlistwrapper {
+		visibility: visible;
+		height: 300px;
+		width: 250px;
+		margin-right: 10px;
+		border-radius: 10px;
+		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
+		background-color: white;
+		float: right;
+	}
+
+	#friendlistwrapper2 {
+		visibility: hidden;
+		height: 300px;
+		width: 250px;
+		margin-right: 10px;
+		border-radius: 10px;
+		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
+		background-color: white;
+		float: right;
+	}
+	#leftimg {
+		margin-right: 10px;
+	
+	
+	}
+	#left {
+		width: 26px;
+		height: 28px;
+		background-image: url(resources/images/left.png);
+		border: none;
+		background-color: white;
+		flex: 2;
+	}
+
+	
 
 	</style>
 </head>
@@ -304,7 +336,7 @@
 			<div id="friendlistwrapper">
 				<div id="top">
 					<div  id="title"><a href="/notice/list">이웃나무</a></div>
-					<div id="search"><img src="resources/images/search.png"></div>
+					<div id="search"><button id="searchbtn" onclick="search()"></button></div>
 					<div id="delete"><img src="resources/images/x.png" ></div>
 				</div>
 				<div id="mid">
@@ -313,6 +345,25 @@
 					장희원 < emark@naver.com ><br>
 					윤성현 < cartoon@naver.com ><br>
 					김예지 < yjkim@naver.com><br>
+					</div>
+				</div>
+				<div id="bottom">
+					<div id="request">뿌리추가 요청 [2]건</div>
+				</div>
+			</div>	
+			<div id="friendlistwrapper2">
+				<div id="top">
+					<div  id="title"><a href="/notice/list">이웃나무찾기</a></div>					
+					<div id="leftimg"><button id="left" onclick="left()"></button></div>
+				</div>
+				<div id="mid">
+					<div id="list">
+						<div>
+							<form>
+								<input type="text" id="searchemail" /><input type="submit" id="searchemailconfirm" value="search" />
+							</form>
+						
+						</div>
 					</div>
 				</div>
 				<div id="bottom">
