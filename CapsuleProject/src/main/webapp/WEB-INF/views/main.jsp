@@ -26,14 +26,58 @@
 		
 		function search() {
 			var friendlistwrapper = document.querySelector("#friendlistwrapper");
+			var friendlistwrapper2 = document.querySelector("#friendlistwrapper2");
+			var friendlistwrapper3 = document.querySelector("#friendlistwrapper3");
 			friendlistwrapper.style.visibility="hidden";
 			friendlistwrapper.style.float="left";
-			
-			friendlistwrapper2.style.visibility="visible";
-
+			friendlistwrapper2.style.visibility="visible";	
+			friendlistwrapper2.style.float="right";
+			friendlistwrapper3.style.visibility="hidden";
+			friendlistwrapper3.style.float="left";
 			
 		}
+		
+		function search2() {
+			var friendlistwrapper = document.querySelector("#friendlistwrapper");
+			var friendlistwrapper2 = document.querySelector("#friendlistwrapper2");
+			var friendlistwrapper3 = document.querySelector("#friendlistwrapper3");
+			friendlistwrapper.style.visibility="hidden";
+			friendlistwrapper.style.float="left";
+			friendlistwrapper2.style.visibility="hidden";
+			friendlistwrapper2.style.float="left";
+			friendlistwrapper3.style.visibility="visible";
+			friendlistwrapper3.style.float="right";
+			
+		}
+		
+		function left() {
+			var friendlistwrapper = document.querySelector("#friendlistwrapper");
+			var friendlistwrapper3 = document.querySelector("#friendlistwrapper2");
+			var friendlistwrapper3 = document.querySelector("#friendlistwrapper3");
+			friendlistwrapper.style.visibility="visible";
+			friendlistwrapper.style.float="right";
+			friendlistwrapper2.style.visibility="hidden";
+			friendlistwrapper2.style.float="left";
+			friendlistwrapper3.style.visibility="hidden";
+			friendlistwrapper3.style.float="left";	
+		}
+		
+		function modifymenu(){
+			var modify = document.querySelector("#modifymenu");
+			modify.style.backgroundcolor="#d5cc49";
+		}
 
+		function deletemember() {
+			var deletemember = document.querySelector("#deletemember");
+			var modify = document.querySelector("#modify");
+			var modifyinfo = document.querySelector("#modifyinfo");
+			deletemember.style.visibility="visible";
+			modify.style.visibility="hidden";
+			modifyinfo.style.visibility="hidden";
+		} 
+		
+		<div id="modify" >정도영</div>
+		<div id="modifyinfo">
 		
 	</script>
 	<style type="text/css">
@@ -108,6 +152,8 @@
 	#tree {
 		width: 466px;
 		margin: 0 auto;
+		position: absolute;
+		left: 450px;
 		
 	}
 	#timewrapper {
@@ -268,13 +314,7 @@
 	#bottomwrapper {
 		
 	}
-	#searchbtn {
-		width: 26px;
-		height: 28px;
-		background-image: url(resources/images/search.png);
-		border: none;
-		background-color: white;
-	}
+
 	#friendlistwrapper {
 		visibility: visible;
 		height: 300px;
@@ -294,11 +334,21 @@
 		border-radius: 10px;
 		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
 		background-color: white;
-		float: right;
+		float: left;
+	}
+	#friendlistwrapper3 {
+		visibility: hidden;
+		height: 300px;
+		width: 250px;
+		margin-right: 10px;
+		border-radius: 10px;
+		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
+		background-color: white;
+		float: left;
 	}
 	#leftimg {
 		margin-right: 10px;
-	
+		flex: 2;
 	
 	}
 	#left {
@@ -307,9 +357,80 @@
 		background-image: url(resources/images/left.png);
 		border: none;
 		background-color: white;
-		flex: 2;
 	}
-
+	
+	#searchbtn {
+		width: 26px;
+		height: 28px;
+		background-image: url(resources/images/search.png);
+		border: none;
+		background-color: white;
+	}
+	#search2 {
+		width: 50px;
+		height: 30px;
+	}
+	#modify {
+		font-family:'Nanum Gothic', sans-serif;
+		z-index: 10;
+		font-size: 30px;
+		top: 200px;
+		left: 635px;
+		position: relative;
+		color: #81523e;
+		background-color: white;
+		opacity: 0.8;
+		border-radius: 10px;
+		width: 130px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+	}
+	#modify:HOVER {
+		background-color: #d5cc49;
+	}
+	#modifyinfo {
+		font-family:'Nanum Gothic', sans-serif;
+		z-index: 10;
+		font-size: 20px;
+		top: 205px;
+		left: 600px;
+		position: relative;
+		color: #81523e;
+		background-color: #e2dfcc;
+		border-radius: 10px;
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;	
+		display: flex;
+	}
+	#deletetree {
+		background-color: #0B7903;
+		opacity: 0.5;	
+		border-radius: 10px;
+		width: 450px;
+		height: 150px;
+		position: relative;
+		left: 465px;
+		visibility: hidden;
+	}
+	#deletemember{
+		flex:1;
+	}
+	#modifygo{
+		flex:1;
+	}
+	#deletetext {
+		font-size: 30px;
+		color: black;
+		text-align: center;
+		font-family:'Nanum Gothic', sans-serif;	
+	}
+	#deletebutton {
+		width: 450px;
+		margin: 0 auto;
+	}
 	
 
 	</style>
@@ -321,23 +442,36 @@
 			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule"></div>
 			<div id="capsuleLogo"><img src="resources/images/write.png" alt="OurTime"></div>
 			<div id="tree"><img src="resources/images/tree.png" alt="Mytree"></div>
+			<div id="modify" >정도영</div>
+			<div id="modifyinfo">
+				<div id="modifygo">정보수정</div>
+				<div id="deletemember" onclick="deletemember()">회원탈퇴</div>
+			</div>
+			<div id="deletetree">
+				<div id="deletetext">정도영님 <br />정말 나무를 파기하시겠습니까?</div>
+				<div id="deletebutton"><center><img src="resources/images/ok.png" alt="Mytree" width="50px"><img src="resources/images/minus.png" alt="Mytree" width="50px"></center></div>
+			</div>
 		</div>
 	
 
 		<div id="content2">
+		
+			
+		
 			<div id="timewrapper">
 				<div id="clock">
 					<script type="text/javascript">
 					</script>
 				</div>
-				<div id="gobottom"><a href="#write"><img src="resources/images/diary.png" height="30px;"></a></div>
+				<div id="gobottom"><a href="#write"><img src="resources/images/diary.png" height="30px;" ></a></div>
 			</div>
 					
 			<div id="friendlistwrapper">
 				<div id="top">
 					<div  id="title"><a href="/notice/list">이웃나무</a></div>
-					<div id="search"><button id="searchbtn" onclick="search()"></button></div>
+					<div id="search" onclick="search()"><img src="resources/images/search.png" ></div>
 					<div id="delete"><img src="resources/images/x.png" ></div>
+					
 				</div>
 				<div id="mid">
 					<div id="list">
@@ -351,18 +485,20 @@
 					<div id="request">뿌리추가 요청 [2]건</div>
 				</div>
 			</div>	
+			
+			
+			
 			<div id="friendlistwrapper2">
 				<div id="top">
 					<div  id="title"><a href="/notice/list">이웃나무찾기</a></div>					
-					<div id="leftimg"><button id="left" onclick="left()"></button></div>
+					<div id="leftimg" onclick="left()"><img src="resources/images/left.png"  width="30px"></div>
 				</div>
 				<div id="mid">
 					<div id="list">
 						<div>
-							<form>
-								<input type="text" id="searchemail" /><input type="submit" id="searchemailconfirm" value="search" />
-							</form>
-						
+							
+							<input type="text" id="searchemail" /><button onclick="search2()" id="search2">search</button>
+
 						</div>
 					</div>
 				</div>
@@ -370,8 +506,36 @@
 					<div id="request">뿌리추가 요청 [2]건</div>
 				</div>
 			</div>	
+			
+			
+			
+			<div id="friendlistwrapper3">
+				<div id="top">
+					<div  id="title"><a href="/notice/list">이웃나무찾기2</a></div>					
+					<div id="leftimg" onclick="left()"><img src="resources/images/left.png"  width="30px"></div>
+				</div>
+				<div id="mid">
+					<div id="list">
+						<div id="innerlist">					
+							정도영 < aikuna@naver.com >
+								<span id="plus"><img src="resources/images/plus.png" height="20px"></span>
+								<span id="minus"><img src="resources/images/minus.png" height="20px"></span>
+
+						</div>
+					</div>
+				</div>
+				<div id="bottom">
+					<div id="request">뿌리추가 요청 [2]건</div>
+				</div>
+			</div>	
+			
+		
 		</div>
 	</div>
+	
+	
+	
+	
 	<div id="wrapper2"> 
 		<a name="write"></a>
 		<div id="content3">
@@ -400,6 +564,9 @@
 			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
 		</div>
 	</div>
+	
+	
+	
 	
 	<div id="bottomlogobox">
 			<div id="bottomlogo"><img src="resources/images/capsule1.png" alt="bottomlogo" ></div>
