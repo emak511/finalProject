@@ -11,15 +11,23 @@
 		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 			body{
 				margin: 0px;
+				magin-left:10px;
 				padding: 0px;
 				font-family: 'Nanum Gothic', sans-serif;
 				color:black;
 			}
 			
 			#contentBox{
+				margin-top:10px;
+				margin-left:10px;
 				width:500px;
 				height:300px;
 				resize:none;
+			}
+			
+			#titleBox{
+				margin-left:10px;
+				width:503px;
 			}
 		</style>
 		
@@ -28,7 +36,7 @@
 		<h4>다이어리 작성</h4>
 		<form method="post" action="writeDiary">
 			<div>
-				<input type="text" name="title" placeholder="제목" required/>
+				<input id="titleBox" type="text" name="title" placeholder="제목" required/>
 			</div>
 			<div>
 				<textarea id="contentBox" name="content" placeholder="내용" required></textarea>
@@ -46,10 +54,6 @@
 				<input type="reset" value="다시작성"/>					
 			</div>
 		</form>
-		
-		<div>
-			<a href="list?diary_c1=0&diary_c3=1&memberEmail=ysh@naver.com">다이어리보기</a>
-		</div>
-		
+
 	</body>
 </html>

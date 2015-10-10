@@ -32,4 +32,7 @@ public class DiaryService {
 		diaryDao.update(diary);
 	}
 	
+	public void remove(int diaryNo){
+		 diaryDao.delete(diaryNo);
+	}
 }

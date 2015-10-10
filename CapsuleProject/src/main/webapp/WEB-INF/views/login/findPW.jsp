@@ -18,12 +18,12 @@
 			}
 			
 			h1{
-				margin-left:160px;
+				margin-left:45px;
 				margin-top:30px;
 			}
 			
 			h4{
-				margin-left:135px;
+				margin-left:40px;
 			}
 			
 			#sub{
@@ -32,23 +32,24 @@
 				width:100px;
 				height:30px;
 				border-radius: 5px;
-				margin-left:195px;
+				margin-left:88px;
 				margin-top:15px;
 			}
 			
 			#sub:hover{
 				cursor:pointer;
+				opacity:0.7;
 			}
 			
 			#back a{
-				margin-left:215px;
+				margin-left:110px;
 				margin-top:50px;
 				text-decoration:none;
 			}
 			#inf{
-				width:300px;
+				width:200px;
 				height:70px;
-				margin-left:110px;
+				margin-left:45px;
 			
 			}
 		</style>
@@ -64,10 +65,9 @@
 		</c:if>
 		
 		<form method="post" action="find" >
-			<h4><input type="email" name="memberEmail" size="30" placeholder="이메일을 입력하세요" style="height: 20px;" required></h4>
+			<h4><input type="email" name="memberEmail" size="25" placeholder="Email" style="height: 20px;" required></h4>
 			<div id="inf">
 				가입하신 이메일 주소를 입력해주시면 해당 이메일로 비밀번호가 발송됩니다.
-				입력하신 이메일에서 비밀번호를 입력하세요.
 			</div>
 			<div id="back">
 				<a href="log?result=">돌아가기</a>

@@ -18,17 +18,17 @@
 			}
 			
 			h4{
-				margin-left:160px;
+				margin-left:55px;
 			}
 			
 			h1{
-				margin-left:180px;
+				margin-left:80px;
 				margin-top:30px;
 			}
 			
 			#back a{
 				position:absolute;
-				margin-left:215px;
+				margin-left:110px;
 				margin-top:-17px;
 				text-decoration:none;
 			}
@@ -39,12 +39,13 @@
 				width:100px;
 				height:30px;
 				border-radius: 5px;
-				margin-left:195px;
+				margin-left:88px;
 				margin-top:15px;
 			}
 			
 			#sub:hover{
 				cursor:pointer;
+				opacity:0.7;
 			}
 		</style>
 

@@ -12,32 +12,40 @@
 			body{
 				color:black;
 			}
+			
+			#diaryBox{
+				width:500px;
+				height:300px;
+				border:1px solid black;
+			
+			}
 		</style>
 	</head>
 	
 	<body>
-		<h4>게시물 목록</h4>
-		
-		<table>
-			<tr>
-				<th style="width:80px">날짜</th>
-				<th>제목</th>
-				<th style="width:80px">내용</th>
-			</tr>
+
+		<section>
+			<div id="diaryBox">
+				<div>
+				<img src="resources/images/Left.png" width="50px"/>
+				</div>
+				<div>
+				<img src="resources/images/right.png" width="50px"/>
+				</div>
+				<c:forEach var="diary" items="${list}">
+					<li>${diary.diaryTitle }</li>
+					<li>${diary.diaryDate }</li>
+					<li>${diary.diaryContent }</li>	
+				</c:forEach>
 			
-			<c:forEach var="diary" items="${list}">
-				<tr>
-					<td>${diary.diaryDate}</td>
-					<td>${diary.diaryTitle}</td>
-					<td>${diary.diaryContent}</td>
-				</tr>
-			</c:forEach>
-		</table>
+			</div>
+		</section>
+
 
 		<div id="buttonGroup">
-			<a href="write">글쓰기</a>
-			<a href="updateForm?diary_dno=1">수정하기</a>
-			<a href="delete">삭제하기</a>
+			<a href="writeForm">다이어리 작성</a>
+			<a href="updateForm?diary_dno=9">수정하기</a>
+			<a href="delete?diary_dno=6">삭제하기</a>
 		</div>
 	</body>
 </html>

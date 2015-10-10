@@ -18,32 +18,33 @@
 			}
 			
 			h1{
-				margin-left:200px;
+				margin-left:95px;
 				margin-top:30px;
 			}
 			
 			h4{
-				margin-left:160px;
+				margin-left:55px;
 			}
 			
 			#sub{
 				border: none;
 				background-color:#b0ac5e;
-				width:100px;
+				width:90px;
 				height:30px;
 				border-radius: 5px;
-				margin-left:195px;
+				margin-left:90px;
 				margin-top:20px;
 			}
 			
 			#sub:hover{
 				cursor:pointer;
+				opacity:0.7;
 			}
 			
 			#findpass a{
 				float:left;
 				text-decoration:none;
-				margin-left:160px;
+				margin-left:55px;
 				margin-top:10px;
 			}
 			
@@ -53,22 +54,22 @@
 				margin-top:10px;
 				text-decoration:none;
 			}
-
+			
 		</style>
 	
 	</head>
 	<body>
 		<h1>로그인</h1>
 		<form method="post" action="logcheck" >
-			<h4><input type="email" name="memberEmail" size="20" placeholder="Email" style="height: 20px;"></h4>
-			<h4><input type="password" name="memberPW" size="20" placeholder="Password" style="height: 20px;"></h4>
+			<h4><input type="email" name="memberEmail" size="20" placeholder="Email" style="height: 20px;" required></h4>
+			<h4><input type="password" name="memberPW" size="20" placeholder="Password" style="height: 20px;" required></h4>
 			<div id="findpass">
 				<a href="findPW?findp=">비밀번호 찾기/</a>
 			</div>
 			<div id="new">
 				<a href="newMember?check=">회원가입</a>
 			</div>
-			<input id="sub" type="submit" value="LOGIN" formtarget="_parent"> 
+			<input id="sub" type="submit" value="로그인" formtarget="_parent"> 
 		</form>
 
 		<c:if test="${result=='wrongPw'}">
@@ -79,7 +80,7 @@
 		
 		<c:if test="${result=='wrongEmail' }">
 			<script type="text/javascript">
-		    	alert("유효하지 않은 이메일 입니다.");
+		    	alert("존재하지 않는 이메일 입니다.");
 		    </script>
 		</c:if>
 		
