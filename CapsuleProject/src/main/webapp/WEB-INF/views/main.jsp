@@ -117,7 +117,7 @@
 			<div id="content4-1">
 				<div id="logo2"><img src="resources/images/capsule1.png" alt="Capsule" height="130px"></div>
 				<div id="noticetext">
-					<div id="noticetext-1">공지사항</div>
+					<div id="noticetext-1"><a href="notice/list">공지사항</a></div>
 					<div id="noticetext-2">공지사항 내용</div>
 				</div>
 				<div id="timecapsuletext">타입캡슐</div>
@@ -129,7 +129,16 @@
 			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
 		</div>
 		<div id="content6">
-			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
+			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
+			<div id="capsulelist">
+				<form>
+					<select>
+						<option>전체보기</option>
+						<option>친구보기</option>
+						<option>나만보기</option>
+					</select>
+				</form>
+			</div>
 		</div>
 		<div id="content7">
 			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
