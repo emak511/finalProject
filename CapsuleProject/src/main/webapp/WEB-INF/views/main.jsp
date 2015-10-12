@@ -25,18 +25,7 @@
 			}, 1000);	
 		};
 		
-		function search() {
-			var friendlistwrapper = document.querySelector("#friendlistwrapper");
-			var friendlistwrapper2 = document.querySelector("#friendlistwrapper2");
-			var friendlistwrapper3 = document.querySelector("#friendlistwrapper3");
-			friendlistwrapper.style.visibility="hidden";
-			friendlistwrapper.style.float="left";
-			friendlistwrapper2.style.visibility="visible";	
-			friendlistwrapper2.style.float="right";
-			friendlistwrapper3.style.visibility="hidden";
-			friendlistwrapper3.style.float="left";
-			
-		}
+		
 		
 		function search2() {
 			var friendlistwrapper = document.querySelector("#friendlistwrapper");
@@ -104,9 +93,6 @@
 	
 
 		<div id="content2">
-		
-			
-		
 			<div id="timewrapper">
 				<div id="clock">
 					<script type="text/javascript">
@@ -114,73 +100,7 @@
 				</div>
 				<div id="gobottom"><a href="#write"><img src="resources/images/diary.png" height="30px;" ></a></div>
 			</div>
-				
-			<div id="friendlistwrapper">
-				<iframe id="friend" src="friendlistwrapper">	
-					<div id="top">
-						<div  id="title"><a href="/notice/list">이웃나무</a></div>
-						<div id="search" onclick="search()"><img src="resources/images/search.png" ></div>
-						<div id="delete"><img src="resources/images/x.png" ></div>
-						
-					</div>
-					<div id="mid">
-						<div id="list">
-						정도영 < aikuna@naver.com ><br>
-						장희원 < emark@naver.com ><br>
-						윤성현 < cartoon@naver.com ><br>
-						김예지 < yjkim@naver.com><br>
-						</div>
-					</div>
-					<div id="bottom">
-						<div id="request">뿌리추가 요청 [2]건</div>
-					</div>
-				</iframe>
-			</div>	
-			
-			
-			
-			<div id="friendlistwrapper2">
-				<div id="top">
-					<div  id="title"><a href="/notice/list">이웃나무찾기</a></div>					
-					<div id="leftimg" onclick="left()"><img src="resources/images/left.png"  width="30px"></div>
-				</div>
-				<div id="mid">
-					<div id="list">
-						<div>
-							
-							<input type="text" id="searchemail" /><button onclick="search2()" id="search2">search</button>
-
-						</div>
-					</div>
-				</div>
-				<div id="bottom">
-					<div id="request">뿌리추가 요청 [2]건</div>
-				</div>
-			</div>	
-			
-			
-			
-			<div id="friendlistwrapper3">
-				<div id="top">
-					<div  id="title"><a href="/notice/list">이웃나무찾기2</a></div>					
-					<div id="leftimg" onclick="left()"><img src="resources/images/left.png"  width="30px"></div>
-				</div>
-				<div id="mid">
-					<div id="list">
-						<div id="innerlist">					
-							정도영 < aikuna@naver.com >
-								<span id="plus"><img src="resources/images/plus.png" height="20px"></span>
-								<span id="minus"><img src="resources/images/minus.png" height="20px"></span>
-
-						</div>
-					</div>
-				</div>
-				<div id="bottom">
-					<div id="request">뿌리추가 요청 [2]건</div>
-				</div>
-			</div>	
-			
-		
+			<iframe id="friend" src="sub/friendlistwrapper" ></iframe>	
 		</div>
 	</div>
 	
@@ -217,13 +137,8 @@
 	</div>
 	
 	
+	<iframe id="bottomlogobox" src="sub/bottomlogobox"></iframe>
 	
-	
-	<div id="bottomlogobox">
-			<div id="bottomlogo"><img src="resources/images/capsule1.png" alt="bottomlogo" ></div>
-			<div id="bottomtext"><img src="resources/images/write.png" alt="bottomtext" ></div>
-	</div>
-		
 
 </body>
 </html>

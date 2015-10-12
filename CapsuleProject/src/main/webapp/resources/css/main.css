@@ -2,6 +2,9 @@
 		margin: 0px;
 		width:100%;
 	}
+	a {
+		text-decoration: none;
+	}
 	#wrapper {
 		width:100%;
 		height:100%;
@@ -219,6 +222,13 @@
 		position: relative;
 		top: 170px;
 		margin: 0 auto;
+		border: none;
+		left: 400px;
+	}
+	#bottomlogobox2 {
+		
+		width: 680px;
+		height: 400px;;
 	}
 	#bottomlogo {
 		width: 234px;
@@ -231,42 +241,40 @@
 	#bottomwrapper {
 		
 	}
-
-	#friendlistwrapper {
-		visibility: visible;
+	#friend {
 		height: 300px;
 		width: 250px;
 		margin-right: 10px;
 		border-radius: 10px;
 		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
 		background-color: white;
-		float: right;
+		border: none;
+		float: right; 
+	}
+	#friendlistwrapper {
+		height: 300px;
+		width: 250px;
+		background-color: white;
 	}
 
 	#friendlistwrapper2 {
-		visibility: hidden;
 		height: 300px;
 		width: 250px;
-		margin-right: 10px;
-		border-radius: 10px;
-		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
 		background-color: white;
-		float: left;
 	}
 	#friendlistwrapper3 {
-		visibility: hidden;
 		height: 300px;
 		width: 250px;
-		margin-right: 10px;
-		border-radius: 10px;
-		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
 		background-color: white;
-		float: left;
+	}
+	#friendlistwrapper4 {
+		height: 300px;
+		width: 250px;
+		background-color: white;
 	}
 	#leftimg {
 		margin-right: 10px;
 		flex: 2;
-	
 	}
 	#left {
 		width: 26px;
@@ -351,5 +359,3 @@
 	#witecapsulebox {
 		visibility: hidden;
 	}
-
-	</style>
