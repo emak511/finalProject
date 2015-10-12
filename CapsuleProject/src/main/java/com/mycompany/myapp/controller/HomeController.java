@@ -36,9 +36,9 @@ public class HomeController {
 		return "home";
 	}
 		
-		@RequestMapping("main")
+		@RequestMapping("mmain")
 		public String login() {
-			return "main";
+			return "mmain";
 	}
 	   
 		@RequestMapping("home_1")

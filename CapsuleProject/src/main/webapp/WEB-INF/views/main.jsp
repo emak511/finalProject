@@ -74,8 +74,9 @@
 
 </head>
 <body>
-
-	<div id="wrapper">
+	
+	
+		<div id="wrapper">
 		<div id="content1">
 			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule"></div>
 			<div id="capsuleLogo"><img src="resources/images/write.png" alt="OurTime"></div>
@@ -103,50 +104,6 @@
 			<iframe id="friend" src="sub/friendlistwrapper" ></iframe>	
 		</div>
 	</div>
-	
-	
-	
-	
-	<div id="wrapper2"> 
-		<a name="write"></a>
-		<div id="content3">
-		
-		</div>
-		
-		<div id="content4" >
-			<div id="content4-1">
-				<div id="logo2"><img src="resources/images/capsule1.png" alt="Capsule" height="130px"></div>
-				<div id="noticetext">
-					<div id="noticetext-1"><a href="notice/list">공지사항</a></div>
-					<div id="noticetext-2">공지사항 내용</div>
-				</div>
-				<div id="timecapsuletext">타입캡슐</div>
-				<div id="timecasuleimg" onclick="timecapsuleform"><img src="resources/images/send.png" alt="SendTimeCapsule"></div>		
-			</div>
-		</div>
-		
-		<div id="content5">
-			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
-		</div>
-		<div id="content6">
-			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
-			<div id="capsulelist">
-				<form>
-					<select>
-						<option>전체보기</option>
-						<option>친구보기</option>
-						<option>나만보기</option>
-					</select>
-				</form>
-			</div>
-		</div>
-		<div id="content7">
-			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
-		</div>
-	</div>
-	
-	
-	<iframe id="bottomlogobox" src="sub/bottomlogobox"></iframe>
 	
 
 </body>

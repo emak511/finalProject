@@ -14,7 +14,6 @@
 	}
 	#wrapper2 {
 		position: relative;
-		top: 600px;
 	}
 	#content1 {
 	 	position:absolute;
@@ -363,4 +362,16 @@
 	#capsulelist {
 		top: 60px;
 		position: relative;
+	}
+	#iframe1 {
+		width: 100%;
+		height: 600px;
+		border: none;
+		scroll: none;
+	}
+	#iframe2 {
+		width: 100%;
+		border: none;
+		scroll: none;
+		height: 500px;
 	}

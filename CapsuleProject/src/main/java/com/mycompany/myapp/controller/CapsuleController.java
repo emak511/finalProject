@@ -47,4 +47,14 @@ public class CapsuleController {
 	public String bottomlogobox2(){
 		return "sub/bottomlogobox2";
 	}
+	
+	@RequestMapping("main")
+	public String main(){
+		return "main";
+	}
+	
+	@RequestMapping("main2")
+	public String main2(){
+		return "main2";
+	}
 }
