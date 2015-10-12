@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<link rel="stylesheet" href="resources/css/main.css">
+	<link rel="stylesheet" href="resources/css/main2.css">
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 	//이벤트 연결
