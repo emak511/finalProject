@@ -1,6 +1,10 @@
+	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+	
 	body {
 		margin: 0px;
 		width:100%;
+		font-family:'Nanum Gothic', sans-serif;
+		color: #3F1000;
 	}
 	a {
 		text-decoration: none;
@@ -62,19 +66,20 @@
 		background-color: #432419;
 	}
 	#logo {
-		width: 234px;
-		margin: 0 auto;
+		margin : 0 auto;
+		width: 80px;
 	}
-	#capsuleLogo {
-		width: 594px;
-		margin: 0 auto;
+	#mainNote {
+		margin : 0 auto;
+		width: 70px;
+		height: 70px;
 	}
 	#tree {
-		width: 466px;
-		margin: 0 auto;
+		width: 100px;
+		margin : 0 auto;
 		position: absolute;
 		left: 450px;
-		
+				
 	}
 	#timewrapper {
 		width: 350px;
@@ -96,6 +101,22 @@
 		
 	}
 
+	#modify {
+		font-family: 'Nanum Gothic', sans-serif;
+	}
+	
+	#modifyinfo {
+		font-family: 'Nanum Gothic', sans-serif;
+	}
+	#Hashtag {
+		font-family:'Nanum Gothic', sans-serif;
+		color: #3F1000;
+		font-size: x-large;
+		font-weight: bold;
+		font-style: italic;
+		text-align: center;
+	}
+	
 	#top {
 		display: flex;
 		width: 250px;

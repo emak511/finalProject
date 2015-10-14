@@ -36,8 +36,7 @@
 			friendlistwrapper2.style.visibility="hidden";
 			friendlistwrapper2.style.float="left";
 			friendlistwrapper3.style.visibility="visible";
-			friendlistwrapper3.style.float="right";
-			
+			friendlistwrapper3.style.float="right";			
 		}
 		
 		function left() {
@@ -70,16 +69,20 @@
 			
 		}
 		
+		$(document).ready(function(){
+			$("div").animate
+		}
 	</script>
 
 </head>
 <body>
 	
 	
-	<div id="wrapper">
+		<div id="wrapper">
 		<div id="content1">
-			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule"></div>
-			<div id="capsuleLogo"><img src="resources/images/write.png" alt="OurTime"></div>
+			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule" width=80px;></div>
+			<div id="mainNote"><img src="resources/images/mainNote.png" alt="OurTime" height= 70px;></div>
+			<div id="Hashtag">#자소서 #중간고사 #메르스 #가을자켓</div>
 			<div id="tree"><img src="resources/images/tree.png" alt="Mytree"></div>
 			<div id="modify" >정도영</div>
 			<div id="modifyinfo">
