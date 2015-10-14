@@ -57,4 +57,14 @@ public class CapsuleController {
 	public String main2(){
 		return "main2";
 	}
+	
+	@RequestMapping("sendtimecapsule")
+	public String sendtimecapsule(){
+		return "sub/sendtimecapsule";
+	}
+	
+	@RequestMapping("viewtimecapsule")
+	public String viewtimecapsule(){
+		return "sub/viewtimecapsule";
+	}
 }
