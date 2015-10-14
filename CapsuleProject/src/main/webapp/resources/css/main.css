@@ -22,16 +22,16 @@
 	#content1 {
 	 	position:absolute;
 		width:100%;
-		height:300px;
+		height:200px;
 		background-color: #d5cc49;
 		z-index: 10;
 		
 	}
 	#content2 {	
 		position:relative;
-		top: 300px;
+		top: 200px;
 		width:100%;
-		height:300px;
+		height:600px;
 		background-color: #99d3bb;
 		z-index: 1;
 	}
@@ -74,12 +74,10 @@
 		width: 70px;
 		height: 70px;
 	}
-	#tree {
-		width: 100px;
-		margin : 0 auto;
+	#tree {		
 		position: absolute;
-		left: 450px;
-				
+		left: 0px;	
+		margin-bottom: 0px;			
 	}
 	#timewrapper {
 		width: 350px;
@@ -89,7 +87,6 @@
 		border-radius: 10px;
 		box-shadow : 5px 5px 10px rgba(0, 0, 0, 10);
 		position: absolute;
-
 	}
 	#clock {
 		width: 280px;
@@ -97,17 +94,10 @@
 		font-size: 30px; 
 		color : white;
 		font-family:'Nanum Gothic', sans-serif;
-		display: inline-block;
-		
+		display: inline-block;		
 	}
 
-	#modify {
-		font-family: 'Nanum Gothic', sans-serif;
-	}
 	
-	#modifyinfo {
-		font-family: 'Nanum Gothic', sans-serif;
-	}
 	#Hashtag {
 		font-family:'Nanum Gothic', sans-serif;
 		color: #3F1000;
@@ -319,18 +309,25 @@
 	#modify {
 		font-family:'Nanum Gothic', sans-serif;
 		z-index: 10;
-		font-size: 30px;
+		font-size: 15px;
+		font-weight: bold;
 		top: 200px;
 		left: 635px;
 		position: relative;
 		color: #81523e;
-		background-color: white;
-		opacity: 0.8;
-		border-radius: 10px;
-		width: 130px;
-		height: 50px;
+		width: 140px;
+		height: 60px;
 		line-height: 50px;
 		text-align: center;
+	}
+	
+	#ground {
+		position: absolute;
+		margin-bottom: 
+	}
+	
+	#modifyinfo {
+		font-family: 'Nanum Gothic', sans-serif;
 	}
 	#modify:HOVER {
 		background-color: #d5cc49;

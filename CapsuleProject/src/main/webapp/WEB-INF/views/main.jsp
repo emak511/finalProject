@@ -68,12 +68,13 @@
 			var timecapsuleform = document.querySelector("#deletemember");
 			
 		}
-		
-		$(document).ready(function(){
-			$("div").animate
-		}
+	
 	</script>
-
+	<style type="text/css">
+	 #modify {
+	 	background-image: url(resources/images/erer.png);
+	 }
+	</style>
 </head>
 <body>
 	
@@ -83,8 +84,10 @@
 			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule" width=80px;></div>
 			<div id="mainNote"><img src="resources/images/mainNote.png" alt="OurTime" height= 70px;></div>
 			<div id="Hashtag">#자소서 #중간고사 #메르스 #가을자켓</div>
-			<div id="tree"><img src="resources/images/tree.png" alt="Mytree"></div>
-			<div id="modify" >정도영</div>
+			<div id="tree"><img src="resources/images/gggggg.png" alt="Mytree"></div>
+			<div id="modify" >
+				<div id="nameLabel">정도영</div>
+			</div>
 			<div id="modifyinfo">
 				<div id="modifygo">정보수정</div>
 				<div id="deletemember" onclick="deletemember()">회원탈퇴</div>
