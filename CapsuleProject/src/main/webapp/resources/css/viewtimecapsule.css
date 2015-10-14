@@ -1,0 +1,24 @@
+	body {
+		margin: 0;
+	}
+	#viewtimecapsulewrapper {
+		width: 680px;
+		display: flex;
+	}
+	
+	#viewtimecapsule {
+		margin: 0 auto;
+		flex: 3;
+	}
+	#leftleft {
+
+
+		background-image: url(resources/images/leftleft.png);
+		flex: 1;
+	}
+	#rightright {
+
+
+		background-image: url(resources/images/rightright.png);
+		flex: 1;
+	}

@@ -67,4 +67,7 @@ public class CapsuleController {
 	public String viewtimecapsule(){
 		return "sub/viewtimecapsule";
 	}
+	
+	
+	
 }

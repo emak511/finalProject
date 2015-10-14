@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,11 +38,13 @@
 			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
 			<div id="capsulelist">
 				<form>
+			<%-- 	<c:if 
+					<c:forEach var="fcapsule" items="${list}">
 					<select>
-						<option>전체보기</option>
-						<option>친구보기</option>
-						<option>나만보기</option>
+						<option>${fcapsule.fCapsuleGname}</option>
 					</select>
+					</c:forEach> --%>
+					
 				</form>
 			</div>
 		</div>
