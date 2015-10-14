@@ -7,24 +7,6 @@
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="resources/css/main2.css">
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript">
-	//이벤트 연결
-		window.onload = function() {
-		// 문서 객체 선택
-			var clock = document.getElementById('clock');
-			
-			//1초마다 함수 실행
-			setInterval(function() {
-				var now = new Date();
-				var nowall = now.getFullYear() + "." + 
-				(now.getMonth()+1) + "." + now.getDate() + "  " +
-				now.getHours() + ":" + 
-				now.getMinutes() + ":" + now.getSeconds() + " ";
-				
-				clock.innerHTML = nowall.toString();
-			}, 1000);	
-		};
-	</script>
 </head>
 <body>
 
@@ -67,10 +49,11 @@
 			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
 		</div>
 	</div>
+	<div id="iframewrapper">
+			<iframe id="bottomlogobox" src="sub/bottomlogobox" name="bottomlogobox"></iframe>
+		</div>
 	
-	
-	<iframe id="bottomlogobox" src="sub/bottomlogobox" name="bottomlogobox"></iframe>
-	
-	
+
+
 </body>
 </html>

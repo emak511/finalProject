@@ -76,7 +76,7 @@
 <body>
 	
 	
-		<div id="wrapper">
+	<div id="wrapper">
 		<div id="content1">
 			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule"></div>
 			<div id="capsuleLogo"><img src="resources/images/write.png" alt="OurTime"></div>
