@@ -1,0 +1,16 @@
+	body {
+		margin: 0;
+	}
+	#bottomlogobox2 {
+		width: 680px;
+		height: 400px;;
+	}
+	
+	#bottomlogo {
+		width: 234px;
+		margin: auto auto;
+	}
+	#bottomtext {
+		width: 594px;
+		margin: auto auto;
+	}

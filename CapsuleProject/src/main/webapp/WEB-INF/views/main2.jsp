@@ -25,13 +25,14 @@
 					<div id="noticetext-1"><a href="list">공지사항</a></div>
 					<div id="noticetext-2">공지사항 내용</div>
 				</div>
-				<div id="timecapsuletext">타입캡슐</div>
-				<div id="timecasuleimg" onclick="timecapsuleform"><img src="resources/images/send.png" alt="SendTimeCapsule"></div>		
+				<div id="timecapsuletext"><a href="sendtimecapsule"  target="bottomlogobox">타입캡슐 보내기</a></div>
+				<div id="timecapsuletext2"><a href="viewtimecapsule"  target="bottomlogobox">타입캡슐 보기</a></div>
+				<div id="timecapsuleimg"><img src="resources/images/send.png" alt="SendTimeCapsule"></div>		
 			</div>
 		</div>
 		
 		<div id="content5">
-			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
+			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
 		</div>
 		<div id="content6">
 			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
@@ -46,11 +47,11 @@
 			</div>
 		</div>
 		<div id="content7">
-			<div id="capsulebox1"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></div>
+			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
 		</div>
 	</div>
 	<div id="iframewrapper">
-			<iframe id="bottomlogobox" src="sub/bottomlogobox" name="bottomlogobox"></iframe>
+			<iframe id="bottomlogobox" src="sub/bottomlogobox" name="bottomlogobox" ></iframe>
 		</div>
 	
 

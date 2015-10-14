@@ -43,10 +43,10 @@ public class CapsuleController {
 		return "redirect:sub/bottomlogobox2";
 	}
 	
-	@RequestMapping("sub/bottomlogobox2")
+/*	@RequestMapping("sub/bottomlogobox2")
 	public String bottomlogobox2(){
 		return "sub/bottomlogobox2";
-	}
+	}*/
 	
 	@RequestMapping("main")
 	public String main(){
@@ -56,5 +56,15 @@ public class CapsuleController {
 	@RequestMapping("main2")
 	public String main2(){
 		return "main2";
+	}
+	
+	@RequestMapping("sendtimecapsule")
+	public String sendtimecapsule(){
+		return "sub/sendtimecapsule";
+	}
+	
+	@RequestMapping("viewtimecapsule")
+	public String viewtimecapsule(){
+		return "sub/viewtimecapsule";
 	}
 }
