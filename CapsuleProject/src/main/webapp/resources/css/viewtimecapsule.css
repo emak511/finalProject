@@ -7,18 +7,26 @@
 	}
 	
 	#viewtimecapsule {
+		width: 680px;
 		margin: 0 auto;
 		flex: 3;
 	}
 	#leftleft {
-
-
-		background-image: url(resources/images/leftleft.png);
+		position: relative;
+		top:130px;
+		z-index: 1;
 		flex: 1;
+		height: 128px;
+		background-image: url(../images/leftleft.png);
+		
 	}
 	#rightright {
-
-
-		background-image: url(resources/images/rightright.png);
+		position: relative;
+		top:130px;
+		z-index: 1;
 		flex: 1;
+		height: 128px;
+
+		background-image: url(../images/rightright.png);
+		
 	}

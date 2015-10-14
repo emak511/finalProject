@@ -38,13 +38,12 @@
 			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
 			<div id="capsulelist">
 				<form>
-			<%-- 	<c:if 
-					<c:forEach var="fcapsule" items="${list}">
 					<select>
-						<option>${fcapsule.fCapsuleGname}</option>
+						<c:forEach var="Fcapsule" items="${list}">
+							<option>${Fcapsule.fCapsuleGname }</option>
+						</c:forEach>
 					</select>
-					</c:forEach> --%>
-					
+					<input type="submit" value="confirm" />
 				</form>
 			</div>
 		</div>
@@ -52,9 +51,9 @@
 			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
 		</div>
 	</div>
-	<div id="iframewrapper">
+	
 			<iframe id="bottomlogobox" src="sub/bottomlogobox" name="bottomlogobox" ></iframe>
-		</div>
+		
 	
 
 
