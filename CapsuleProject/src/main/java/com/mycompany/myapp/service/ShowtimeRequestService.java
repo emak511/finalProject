@@ -4,31 +4,41 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.mycompany.myapp.dao.ShowtimeDao;
 import com.mycompany.myapp.dao.ShowtimeRequestDao;
-import com.mycompany.myapp.dto.Diary;
 import com.mycompany.myapp.dto.ShowtimeRequest;
 
 public class ShowtimeRequestService {
 	@Autowired
 	private ShowtimeRequestDao showtimeRequestDao;
 	
-	//¿äÃ» ´Ù º¸±â
+	@Autowired
+	private ShowtimeDao showtimeDao;
+	
+	//ï¿½ï¿½Ã» ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public List<ShowtimeRequest> viewRequestList(int showtimeRequestNo, int rowsPerPage,String memberEmail){
 		List<ShowtimeRequest> list=showtimeRequestDao.selectByPage(showtimeRequestNo,rowsPerPage, memberEmail);
 		return list;
 	}
 	
-	//Å¸ÀÓÄ¸½¶ ½Â¶ô =º¸±â 
-	public int acceptRequest(int showtimeRequestNo){
-		showtimeRequest.delete()
+	//Å¸ï¿½ï¿½Ä¸ï¿½ï¿½ ï¿½Â¶ï¿½ =ï¿½ï¿½ï¿½ï¿½ 
+	public int acceptRequest(int showtimeRequestNo, String member_email){
+		ShowtimeRequest showtimeReqest = showtimeRequestDao.selectByPk(showtimeRequestNo, member_email);
+		int capsuleno = showtimeReqest.getShowtimeNo();
+		
+		showtimeRequestDao.delete(showtimeRequestNo,member_email);
+		int showtimePK =showtimeDao.insert(capsuleno);
+		
+		//insertí•œ ìº¡ìŠ ë²ˆí˜¸ ë°˜í™˜
+		return showtimePK; 
+	}
+
+	
+
+    //ìš”ì²­ë°›ì€ ìº¡ìŠ ê±°ì ˆí–‡ì„ ë–„ ì‚­ì œ	
+	public void rejectRequest(int showtimeRequestNo, String member_email){
+		
+		showtimeRequestDao.delete(showtimeRequestNo,member_email);
 		
 	}
-	public void remove(int diaryNo){
-		 diaryDao.delete(diaryNo);
-	}
-	
-	//°ÅÀı
-/*	rejectRequest
-	*/
-	//
 }

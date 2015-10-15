@@ -25,7 +25,7 @@ public class ShowtimeRequestDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	//insert ¿äÃ» µé¾î¿À´Â °Í (¼öÁ¤ ¿äÇÔ)
+	//insert ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 	public Integer insert(ShowtimeRequest showtimeRequest, String memberEmail, String friendEmail, Showtime showtime) {
 		Integer pk = null;
 		String sql = "insert into showtimeRequests(member_email, friend_email, showtime_no, "
@@ -82,7 +82,7 @@ public class ShowtimeRequestDao {
 		return list;
 	}
 	
-	//½Â¶ôÇÑ ¿äÃ»ÀÇ ¼îÅ¸ÀÓ ³Ö¾îÁÖ±â 
+	//ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½Ö±ï¿½ 
 	public ShowtimeRequest selectByPk(int showtimeRequestNo, String memberEmail) {
 		String sql = "select * from showtimeRequests where showtimeRequest_no=? and member_email=?";
 		ShowtimeRequest showtimeRequest = jdbcTemplate.queryForObject(
@@ -93,7 +93,7 @@ public class ShowtimeRequestDao {
 				public ShowtimeRequest mapRow(ResultSet rs, int rowNum) throws SQLException {
 					ShowtimeRequest showtimeRequest = new ShowtimeRequest();
 					showtimeRequest.setShowtimeRequestNo(rs.getInt("showtimeRequest_no"));
-					
+					showtimeRequest.setShowtimeNo(rs.getInt("showtime_no"));
 					return showtimeRequest;
 				}
 			}
