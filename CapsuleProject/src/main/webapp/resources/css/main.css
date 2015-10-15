@@ -1,4 +1,7 @@
-	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+
+ 	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 	
 	body {
 		margin: 0px;
@@ -393,4 +396,4 @@
 		border: none;
 		scroll: none;
 		height: 500px;
-	}
+	}  

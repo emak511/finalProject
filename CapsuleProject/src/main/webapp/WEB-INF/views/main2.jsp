@@ -30,9 +30,9 @@
 				
 				<div id="timecapsuletext2"><a href="viewtimecapsule"  target="bottomlogobox">타입캡슐 보기</a></div>	
 				
-				<div id="timecapsuletext3"><a href="sendtimecapsule"  target="bottomlogobox">타입캡슐 보내기</a></div>
+				<div id="timecapsuletext3"><a href="sendtimecapsule"  target="bottomlogobox">받은 요청</a></div>
 				
-				<div id="timecapsuletext4"><a href="sendtimecapsule"  target="bottomlogobox">타입캡슐 보내기</a></div>
+				<div id="timecapsuletext4"><a href="sendtimecapsule"  target="bottomlogobox">보낸 요청</a></div>
 			</div>
 		</div>
 		

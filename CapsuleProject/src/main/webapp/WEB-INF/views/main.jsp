@@ -79,7 +79,7 @@
 <body>
 	
 	
-		<div id="wrapper">
+ 	<div id="wrapper">
 		<div id="content1">
 			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule" width=80px;></div>
 			<div id="mainNote"><img src="resources/images/mainNote.png" alt="OurTime" height= 70px;></div>
@@ -109,7 +109,7 @@
 			</div>
 			<iframe id="friend" src="sub/friendlistwrapper" ></iframe>	
 		</div>
-	</div>
+	</div>  
 	
 
 </body>
