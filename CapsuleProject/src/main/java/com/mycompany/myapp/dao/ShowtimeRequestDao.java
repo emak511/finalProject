@@ -64,8 +64,9 @@ public class ShowtimeRequestDao {
 	
 	//select
 	public List<ShowtimeRequest> selectByPage(int showtimeRequestNo, int rowsPerPage, String memberEmail) {
-		String sql ="select showtimeRequest_no, member_email from showtimeRequests where member_email= ? order by showtimeRequest_no desc limit ?,?";
-		
+		String sql ="select showtimeRequest_no, member_email from showtimeRequests "
+				+ "where member_email= ? order by showtimeRequest_no desc limit ?,?";
+			
 		List<ShowtimeRequest> list = jdbcTemplate.query(
 			sql, 
 			new Object[] { (showtimeRequestNo-1)*rowsPerPage, rowsPerPage },
@@ -81,6 +82,7 @@ public class ShowtimeRequestDao {
 		return list;
 	}
 	
+	//승락한 요청의 쇼타임 넣어주기 
 	public ShowtimeRequest selectByPk(int showtimeRequestNo, String memberEmail) {
 		String sql = "select * from showtimeRequests where showtimeRequest_no=? and member_email=?";
 		ShowtimeRequest showtimeRequest = jdbcTemplate.queryForObject(
