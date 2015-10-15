@@ -34,7 +34,7 @@ public class CapsuleService {
 	
 	//fCapsule 목록 조회
 	public List<Fcapsule> getFcapsule(String memberEmail){
-		List <Fcapsule> list =  fCapsuleDao.select(memberEmail);
+		List <Fcapsule> list =  fCapsuleDao.select("capsule@naver.com");
 		return list;
 	}
 	

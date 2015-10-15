@@ -1,16 +1,23 @@
 package com.mycompany.myapp.controller;
 
+import java.util.*;
+
 import org.slf4j.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
+import org.springframework.ui.*;
 import org.springframework.web.bind.annotation.*;
 
+import com.mycompany.myapp.dto.*;
 import com.mycompany.myapp.service.*;
 
 @Controller
 public class CapsuleController {
 
 	private static final Logger logger = LoggerFactory.getLogger(CapsuleController.class);
+	
+	@Autowired
+	private CapsuleService capsuleService;
 
 
 	@RequestMapping("sub/friendlistwrapper")
@@ -54,7 +61,9 @@ public class CapsuleController {
 	}
 	
 	@RequestMapping("main2")
-	public String main2(){
+	public String main2(Model model){
+		List <Fcapsule> list  = capsuleService.getFcapsule("capsule@naver.com");
+		model.addAttribute("list", list);
 		return "main2";
 	}
 	
@@ -67,4 +76,7 @@ public class CapsuleController {
 	public String viewtimecapsule(){
 		return "sub/viewtimecapsule";
 	}
+	
+	
+	
 }

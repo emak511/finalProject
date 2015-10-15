@@ -37,7 +37,6 @@ public class FcapsuleDao {
 				}        
  			);
 		return list;
-
 	}
 	
 	// Fcapsule 목록 조회 페이징 처리

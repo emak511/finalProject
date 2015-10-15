@@ -1,0 +1,32 @@
+	body {
+		margin: 0;
+	}
+	#viewtimecapsulewrapper {
+		width: 680px;
+		display: flex;
+	}
+	
+	#viewtimecapsule {
+		width: 680px;
+		margin: 0 auto;
+		flex: 3;
+	}
+	#leftleft {
+		position: relative;
+		top:130px;
+		z-index: 1;
+		flex: 1;
+		height: 128px;
+		background-image: url(../images/leftleft.png);
+		
+	}
+	#rightright {
+		position: relative;
+		top:130px;
+		z-index: 1;
+		flex: 1;
+		height: 128px;
+
+		background-image: url(../images/rightright.png);
+		
+	}

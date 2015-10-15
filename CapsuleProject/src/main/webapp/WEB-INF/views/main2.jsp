@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,10 +39,11 @@
 			<div id="capsulelist">
 				<form>
 					<select>
-						<option>전체보기</option>
-						<option>친구보기</option>
-						<option>나만보기</option>
+						<c:forEach var="Fcapsule" items="${list}">
+							<option>${Fcapsule.fCapsuleGname }</option>
+						</c:forEach>
 					</select>
+					<input type="submit" value="confirm" />
 				</form>
 			</div>
 		</div>
@@ -49,9 +51,9 @@
 			<div id="capsulebox1"><a href="bottomlogobox2"  target="bottomlogobox"><img src="resources/images/capsulebox.png" alt="capsulebox" height="150px"></a></div>
 		</div>
 	</div>
-	<div id="iframewrapper">
+	
 			<iframe id="bottomlogobox" src="sub/bottomlogobox" name="bottomlogobox" ></iframe>
-		</div>
+		
 	
 
 
