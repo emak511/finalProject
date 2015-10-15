@@ -27,7 +27,12 @@
 					<div id="noticetext-2">공지사항 내용</div>
 				</div>
 				<div id="timecapsuletext"><a href="sendtimecapsule"  target="bottomlogobox">타입캡슐 보내기</a></div>
+				
 				<div id="timecapsuletext2"><a href="viewtimecapsule"  target="bottomlogobox">타입캡슐 보기</a></div>	
+				
+				<div id="timecapsuletext3"><a href="sendtimecapsule"  target="bottomlogobox">타입캡슐 보내기</a></div>
+				
+				<div id="timecapsuletext4"><a href="sendtimecapsule"  target="bottomlogobox">타입캡슐 보내기</a></div>
 			</div>
 		</div>
 		

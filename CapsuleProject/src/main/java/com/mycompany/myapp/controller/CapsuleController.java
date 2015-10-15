@@ -75,8 +75,5 @@ public class CapsuleController {
 	@RequestMapping("viewtimecapsule")
 	public String viewtimecapsule(){
 		return "sub/viewtimecapsule";
-	}
-	
-	
-	
+	}	
 }
