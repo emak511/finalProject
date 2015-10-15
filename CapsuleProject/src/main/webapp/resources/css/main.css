@@ -2,7 +2,7 @@
 	
 	body {
 		margin: 0px;
-		width:100%;
+		width:960px;
 		font-family:'Nanum Gothic', sans-serif;
 		color: #3F1000;
 	}
@@ -77,7 +77,8 @@
 	#tree {		
 		position: absolute;
 		left: 0px;	
-		margin-bottom: 0px;			
+		margin-bottom: 0px;
+					
 	}
 	#timewrapper {
 		width: 350px;

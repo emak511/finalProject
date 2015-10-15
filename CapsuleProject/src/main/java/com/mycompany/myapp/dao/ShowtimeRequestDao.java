@@ -28,12 +28,13 @@ public class ShowtimeRequestDao {
 	//insert 요청 들어오는 것 (수정 요함)
 	public Integer insert(ShowtimeRequest showtimeRequest, String memberEmail, String friendEmail, Showtime showtime) {
 		Integer pk = null;
-		String sql = "insert into showtimeRequests(member_email, friend_email, showtime_no, showtime_title, showtime_date, showtime_writedate) values(?,?,?,?,?,?)";
+		String sql = "insert into showtimeRequests(member_email, friend_email, showtime_no, "
+				+ "showtime_title, showtime_date, showtime_writedate) values(?,?,?,?,?,?)";
 		KeyHolder keyHolder = new GeneratedKeyHolder(); 
 		jdbcTemplate.update(new PreparedStatementCreator() {
 		@Override
 		public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
-			PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"friendRequest_no"});
+			PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"showtimeRequest_no"});
 			
 			pstmt.setString(1, memberEmail);
 			pstmt.setString(2, friendEmail);
@@ -51,7 +52,7 @@ public class ShowtimeRequestDao {
 	
 
 	public int delete(int showtimeRequestNo, String memberEmail) {
-		String sql = "delete from showtimeRequests where showtimeRequest=? and member_email=?";
+		String sql = "delete from showtimeRequests where showtimeRequestNo=? and member_email=?";
 		int rows = jdbcTemplate.update(
 			sql,
 			showtimeRequestNo,
