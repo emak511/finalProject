@@ -1,4 +1,4 @@
-package com.mycompany.myapp.controller;
+/*package com.mycompany.myapp.controller;
 
 import java.util.List;
 
@@ -32,7 +32,7 @@ public class RequestController {
 				return "request/list";
 			}
 			//paging 
-			/*@RequestMapping("/request/list")
+			@RequestMapping("/request/list")
 			public String list(
 				@RequestParam(value="pageNo", defaultValue="1") int pageNo, int showtimeRequestNo, String memberEmail, Model model, HttpSession session) {
 			
@@ -72,7 +72,7 @@ public class RequestController {
 			public String delete(@PathVariable int showtimeRequestNo, String memberEmail) {
 				showtimeRequestService.rejectRequest(showtimeRequestNo, memberEmail);
 				return "redirect:/request/list";
-			}*/
+			}
 			
 			
 //===================================================================
@@ -81,3 +81,4 @@ public class RequestController {
 			
 	}
 
+*/

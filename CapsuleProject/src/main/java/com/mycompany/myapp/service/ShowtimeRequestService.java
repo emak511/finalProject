@@ -1,4 +1,4 @@
-package com.mycompany.myapp.service;
+/*package com.mycompany.myapp.service;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class ShowtimeRequestService {
 		}
 		
 	//Accept request (showtime + delete in requestList)
-	/*public int acceptRequest(int showtimeRequestNo, String memberEmail){
+	public int acceptRequest(int showtimeRequestNo, String memberEmail){
 		ShowtimeRequest showtimeRequest = showtimeRequestDao.selectByPk(showtimeRequestNo, memberEmail);
 		int capsuleNo = showtimeRequest.getShowtimeNo();
 		
@@ -39,7 +39,7 @@ public class ShowtimeRequestService {
 		
 		//insert한 캡슐 번호 반환
 		return showtimePK; 
-	}*/
+	}
 	
 
     //reject + delete
@@ -54,3 +54,4 @@ public class ShowtimeRequestService {
 		return rows;
 	}
 }
+*/
