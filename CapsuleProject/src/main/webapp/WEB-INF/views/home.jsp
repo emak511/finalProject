@@ -51,5 +51,8 @@
 			<a href="writeForm">다이어리 쓰기</a>
 		</div>
 		
+		<div id="test">
+			<a href="/request/list">쇼타임 요청</a>
+		</div>
 	</body>
 </html>
