@@ -14,6 +14,8 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
+
+
 import com.mycompany.myapp.dto.Showtime;
 import com.mycompany.myapp.dto.ShowtimeRequest;
 
@@ -63,13 +65,13 @@ public class ShowtimeRequestDao {
 	
 	
 	//select
-	public List<ShowtimeRequest> selectByPage(int showtimeRequestNo, int rowsPerPage, String memberEmail) {
+	public List<ShowtimeRequest> selectByPage(int showtimeRequestNo, int pageNo, int rowsPerPage, String memberEmail) {
 		String sql ="select showtimeRequest_no, member_email from showtimeRequests "
 				+ "where member_email= ? order by showtimeRequest_no desc limit ?,?";
 			
 		List<ShowtimeRequest> list = jdbcTemplate.query(
 			sql, 
-			new Object[] { (showtimeRequestNo-1)*rowsPerPage, rowsPerPage },
+			new Object[] { (pageNo-1)*rowsPerPage, rowsPerPage },
 			new RowMapper<ShowtimeRequest>() {
 				@Override
 				public ShowtimeRequest mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -81,7 +83,7 @@ public class ShowtimeRequestDao {
 		);
 		return list;
 	}
-	
+			
 	//�¶��� ��û�� ��Ÿ�� �־��ֱ� 
 	public ShowtimeRequest selectByPk(int showtimeRequestNo, String memberEmail) {
 		String sql = "select * from showtimeRequests where showtimeRequest_no=? and member_email=?";
@@ -101,4 +103,10 @@ public class ShowtimeRequestDao {
 		return showtimeRequest;
 	}
 	
+	public int selectCount() {
+		String sql = "select count(*) from showtimeRequests";
+		int rows = jdbcTemplate.queryForObject(sql, Integer.class);
+		return rows;
+	}
 }
+
