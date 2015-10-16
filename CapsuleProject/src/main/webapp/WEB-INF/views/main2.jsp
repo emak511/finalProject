@@ -58,9 +58,6 @@
 	</div>
 	
 			<iframe id="bottomlogobox" src="sub/bottomlogobox" name="bottomlogobox" ></iframe>
-		
-	
-
 
 </body>
 </html>
