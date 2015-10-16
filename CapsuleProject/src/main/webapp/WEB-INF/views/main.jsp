@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 	//이벤트 연결
-		window.onload = function() {
+/* 		window.onload = function() {
 		// 문서 객체 선택
 			var clock = document.getElementById('clock');
 			
@@ -24,7 +24,7 @@
 				clock.innerHTML = nowall.toString();
 			}, 1000);	
 		};
-		
+		 */
 		
 		
 		function search2() {
@@ -78,8 +78,32 @@
 </head>
 <body>
 	
+
+	<div id="wrapper">
 	
- 	<div id="wrapper">
+		<div id="content1">
+			<div id="logobox">
+				<center><div id="logo"></div></center>			
+			</div>
+			<div id="mainNotebox">
+				<center><div id="mainNote" ></div></center>	
+			</div>
+			<div id="hashTag">#자소서 #중간고사 #메르스 #가을자켓</div>
+			<div id="treebox">
+				<center><div id="tree"></div></center>
+			</div>
+			<div id="groundbox">
+				<center><div id="ground"></div></center>
+			</div>
+		</div>
+		<div id="content2">
+			<div id="friendwrapper"><iframe id="friend" src="sub/friendlistwrapper" ></iframe></div>
+		</div> 
+
+	</div>
+	
+	
+ 	<!-- <div id="wrapper">
 		<div id="content1">
 			<div id="logo"><img src="resources/images/capsule1.png" alt="Capsule" width=80px;></div>
 			<div id="mainNote"><img src="resources/images/mainNote.png" alt="OurTime" height= 70px;></div>
@@ -109,7 +133,7 @@
 			</div>
 			<iframe id="friend" src="sub/friendlistwrapper" ></iframe>	
 		</div>
-	</div>  
+	</div>   -->
 	
 
 </body>
