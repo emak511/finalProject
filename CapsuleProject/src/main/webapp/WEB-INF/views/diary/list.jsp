@@ -11,43 +11,70 @@
 		<style type="text/css">
 			body{
 				color:black;
+
 			}
 			
 			#diaryBox{
 				width:500px;
 				height:300px;
 				border:1px solid black;
+				
 			}
 			
 			#diaryleft{
 				position:absolute;
-				margin-top:120px;
+				margin-top:50px;
+			}
+			
+			#diaryleft:hover{
+				opacity:0.5;
+				cursor:pointer;
 			}
 			
 			#diaryright{
 				position:absolute;
 				margin-left:450px;
-				margin-top:115px;
+				margin-top:50px;
 			}
+			
+			#diaryright:hover{
+				opacity:0.5;
+				cursor:pointer;
+			}
+			
+			#diaryBox li{
+				list-style:none;
+			}
+
 			
 		</style>
 	</head>
 	
 	<body>
-		<img id="diaryleft" src="../resources/images/diaryleft.png" width="40px"/>
-		<img id="diaryright" src="../resources/images/diaryright.png" width="40px"/>
 		<section>
 			<div id="diaryBox">
-				<c:forEach var="diary" items="${list}" varStatus="status">
-					<c:choose> 
-						<c:when test="${status.count==1}">
-							<li>${diary.diaryTitle }</li>
-							<li>${diary.diaryDate }</li>
-							<li>${diary.diaryContent }</li>	
-						</c:when>
-					</c:choose>
+				<c:forEach var="diary" items="${list}" >
+					<li>${diary.diaryTitle }</li>
+					<li>${memberEmail }</li>
+					<li>${diary.diaryDate }</li>
+					<li>${diary.diaryContent }</li>	
 				</c:forEach>
 			</div>
+			
+			<div id="pager">
+				<c:if test="${pageNo>1 }">
+					<a href="list?pageNo=${pageNo-1 }&diary_c1=${diary_c1}&diary_c3=${diary_c3}&memberEmail=${memberEmail}">
+						<img id="diaryleft" src="../resources/images/diaryleft.png" width="40px"/>
+					</a>
+				</c:if>
+				
+				<c:if test="${pageNo<totalPageNo }">
+					<a href="list?pageNo=${pageNo+1 }&diary_c1=${diary_c1}&diary_c3=${diary_c3}&memberEmail=${memberEmail}">
+						<img id="diaryright" src="../resources/images/diaryright.png" width="40px"/>
+					</a>
+				</c:if>
+			</div>
+			
 		</section>
 
 		<div id="buttonGroup">

@@ -3,10 +3,13 @@ package com.mycompany.myapp.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mycompany.myapp.dto.Diary;
 import com.mycompany.myapp.service.DiaryService;
@@ -52,10 +55,26 @@ public class DiaryController {
 	}
 	
 	@RequestMapping("/diary/list")
-	public String list(int diary_c1, int diary_c3, String memberEmail, Model model){
-		List<Diary> list=diaryService.getDiaryList(diary_c1, diary_c3, memberEmail);
+	public String list(@RequestParam(value="pageNo", defaultValue="1") int pageNo,
+			int diary_c1, int diary_c3, String memberEmail, Model model,
+			HttpSession session){
+		
+		session.setAttribute("pageNo", pageNo);
+		session.setAttribute("memberEmail", memberEmail);
+		session.setAttribute("diary_c1", diary_c1);
+		session.setAttribute("diary_c3", diary_c3);
+		int rowsPerPage=1;
+		int totalPageNo=diaryService.getTotalDiaryNo(diary_c1, diary_c3, memberEmail);
+		
+		List<Diary> list=diaryService.getDiaryList(pageNo, rowsPerPage, diary_c1, diary_c3, memberEmail);
+		
+		model.addAttribute("totalPageNo", totalPageNo);
+		model.addAttribute("pageNo", pageNo);
 		model.addAttribute("list", list);
 		return "diary/list";
+		
+
+
 	}
 	
 	

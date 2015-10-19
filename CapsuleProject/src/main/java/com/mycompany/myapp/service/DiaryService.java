@@ -18,8 +18,8 @@ public class DiaryService {
 		return d;
 	}
 	
-	public List<Diary> getDiaryList(int diary_c1, int diary_c3, String memberEmail){
-		List<Diary> list=diaryDao.select(diary_c1, diary_c3, memberEmail);
+	public List<Diary> getDiaryList(int pageNo, int rowsPerPage, int diary_c1, int diary_c3, String memberEmail){
+		List<Diary> list=diaryDao.select(pageNo, rowsPerPage, diary_c1, diary_c3, memberEmail);
 		return list;
 	}
 	
@@ -34,5 +34,10 @@ public class DiaryService {
 	
 	public void remove(int diaryNo){
 		 diaryDao.delete(diaryNo);
+	}
+	
+	public int getTotalDiaryNo(int diary_c1, int diary_c3, String member_email){
+		int rows=diaryDao.selectCount(diary_c1, diary_c3, member_email);
+		return rows;
 	}
 }
