@@ -44,13 +44,15 @@ public class DiaryDao {
 		return pk;
 	}
 	
-	public List<Diary> select(int diary_c1, int diary_c3, String memberEmail){
-		String sql="select diary_dno, diary_title, diary_content, diary_date from diarys where diary_c1=? and diary_c3=? and member_email=?";
+	public List<Diary> select(int pageNo, int rowsPerPage, int diary_c1, int diary_c3, String memberEmail){
+		String sql="select diary_dno, diary_title, diary_content, diary_date "
+				+ "from diarys where diary_c1=? and diary_c3=? and member_email=?"
+				+ " order by diary_dno desc "
+				+ "limit ?,?";
 		List<Diary> list=jdbcTemplate.query(
 				sql,
-				new Object[] {diary_c1, diary_c3, memberEmail},
+				new Object[] {diary_c1, diary_c3, memberEmail, (pageNo-1)*rowsPerPage, rowsPerPage},
 				new RowMapper<Diary>(){
-					
 					@Override
 					public Diary mapRow(ResultSet rs, int rowNum) throws SQLException{
 						Diary diary=new Diary();
@@ -106,6 +108,16 @@ public class DiaryDao {
 			sql,
 			diaryNo
 		);
+		return rows;
+	}
+	
+	public int selectCount(int diary_c1, int diary_c3, String member_email){
+		String sql="select count(*) from diarys where diary_c1=? and diary_c3=? and member_email=?";
+		int rows=jdbcTemplate.queryForObject(
+				sql,
+				new Object[]{diary_c1, diary_c3, member_email},
+				Integer.class
+			);
 		return rows;
 	}
 }
