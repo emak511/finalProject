@@ -1,4 +1,4 @@
-/*package com.mycompany.myapp.service;
+package com.mycompany.myapp.service;
 
 import java.util.List;
 
@@ -12,6 +12,7 @@ import com.mycompany.myapp.dto.ShowtimeRequest;
 
 @Component
 public class ShowtimeRequestService {
+
 	@Autowired
 	private ShowtimeRequestDao showtimeRequestDao;
 	
@@ -29,7 +30,7 @@ public class ShowtimeRequestService {
 			showtimeRequestDao.insert(showtimeRequest, memberEmail, friendEmail, showtime);
 		}
 		
-	//Accept request (showtime + delete in requestList)
+	/*//Accept request (showtime + delete in requestList)
 	public int acceptRequest(int showtimeRequestNo, String memberEmail){
 		ShowtimeRequest showtimeRequest = showtimeRequestDao.selectByPk(showtimeRequestNo, memberEmail);
 		int capsuleNo = showtimeRequest.getShowtimeNo();
@@ -41,7 +42,7 @@ public class ShowtimeRequestService {
 		return showtimePK; 
 	}
 	
-
+*/
     //reject + delete
 	public void rejectRequest(int showtimeRequestNo, String memberEmail){
 		showtimeRequestDao.delete(showtimeRequestNo,memberEmail);
@@ -54,4 +55,3 @@ public class ShowtimeRequestService {
 		return rows;
 	}
 }
-*/

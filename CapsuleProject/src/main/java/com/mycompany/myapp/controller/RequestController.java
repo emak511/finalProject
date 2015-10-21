@@ -1,19 +1,12 @@
-/*package com.mycompany.myapp.controller;
+package com.mycompany.myapp.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import com.mycompany.myapp.dto.Diary;
 import com.mycompany.myapp.dto.ShowtimeRequest;
 import com.mycompany.myapp.service.ShowtimeRequestService;
 
@@ -31,7 +24,9 @@ public class RequestController {
 				model.addAttribute("list", list);
 				return "request/list";
 			}
-			//paging 
+			
+			
+			/*//paging 
 			@RequestMapping("/request/list")
 			public String list(
 				@RequestParam(value="pageNo", defaultValue="1") int pageNo, int showtimeRequestNo, String memberEmail, Model model, HttpSession session) {
@@ -77,8 +72,7 @@ public class RequestController {
 			
 //===================================================================
 //friend Request			
-			
+			*/
 			
 	}
 
-*/
